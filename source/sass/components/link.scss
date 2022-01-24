@@ -1,0 +1,25 @@
+.link {
+  transition: all $default-transition-settings;
+
+  &:hover {
+    color: $color-main;
+  }
+
+  &--colored {
+    color: $color-main;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--gray {
+    color: $color-dim-gray;
+    font-weight: bold;
+
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

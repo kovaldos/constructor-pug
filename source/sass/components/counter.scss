@@ -1,0 +1,29 @@
+.counter {
+  display: flex;
+  align-items: center;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    color: $color-main;
+    font-weight: bold;
+    border: 2px solid #D9D9D9;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border $default-transition-settings;
+
+    &:hover {
+      border: 2px solid $color-main;
+    }
+  }
+
+  &__number {
+    margin: 0 12px;
+    color: $color-main;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,69 @@
+.social-link {
+  width: 30px;
+  height: 30px;
+  transition: all $default-transition-settings;
+
+  &--facebook {
+    background-image: url('../img/svg/facebook-black.svg');
+
+    &:hover {
+      background-image: url('../img/svg/facebook.svg');
+    }
+  }
+
+  &--instagram {
+    background-image: url('../img/svg/instagram-black.svg');
+
+    &:hover {
+      background-image: url('../img/svg/instagram.svg');
+    }
+  }
+
+  &--telegram {
+    background-image: url('../img/svg/telegram-black.svg');
+
+    &:hover {
+      background-image: url('../img/svg/telegram.svg');
+    }
+  }
+
+  &--twitter {
+    background-image: url('../img/svg/twitter-black.svg');
+
+    &:hover {
+      background-image: url('../img/svg/twitter.svg');
+    }
+  }
+
+  &--viber {
+    background-image: url('../img/svg/viber-black.svg');
+
+    &:hover {
+      background-image: url('../img/svg/viber.svg');
+    }
+  }
+
+  &--vk {
+    background-image: url('../img/svg/VK-black.svg');
+
+    &:hover {
+      background-image: url('../img/svg/VK.svg');
+    }
+  }
+
+  &--whatsapp {
+    background-image: url('../img/svg/whatsapp-black.svg');
+
+    &:hover {
+      background-image: url('../img/svg/whatsapp.svg');
+    }
+  }
+
+  &--youtube {
+    background-image: url('../img/svg/youtube-black.svg');
+
+    &:hover {
+      background-image: url('../img/svg/youtube.svg');
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+
+  label {
+    opacity: 0;
+    font-size: 12px;
+    color: $color-light-grey;
+    padding-left: 20px;
+  }
+}
+
+.input {
+  border: 1px solid $color-light-grey;
+  border-radius: 5px;
+  padding: 12px 20px;
+  outline: none;
+  font-size: 12px;
+  
+  &::placeholder {
+    color: $color-light-grey;
+  }
+
+  &:focus {
+    border: 1px solid $color-matterhorn;
+
+    + label {
+      opacity: 1;
+    }
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}
