@@ -12,7 +12,7 @@
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
-@import "global/container";
+@import "global/common";
 @import "global/components";
 
 // Blocks
@@ -21,6 +21,7 @@
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/modal";
+@import "blocks/services";
 
 // Components
 //---------------------------------
