@@ -4,6 +4,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/init-modals';
 
 import {bannerSlider} from './blocks/banner-slider';
+import {portfolioSlider} from './blocks/portfolio-slider';
 
 // Utils
 // ---------------------------------
@@ -19,3 +20,4 @@ initModals();
 // Blocks
 
 bannerSlider();
+portfolioSlider();

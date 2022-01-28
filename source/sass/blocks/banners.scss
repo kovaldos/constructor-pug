@@ -13,9 +13,69 @@
     }
   }
 
-  &--middle {
-    max-width: 1250px;
-    margin: 0 auto;
+  &--no-full-screen {
+    .banner__slider-controls {
+      width: 96%;
+    }
+
+    .banner__slide-content {
+      height: 100%;
+      padding: 0 60px;
+      max-width: 720px;
+    }
+
+    @include viewport--767 {
+      .container {
+        padding: 0;
+      }
+
+      .banner__slide-content {
+        justify-content: flex-start;
+        padding: 50px 0;
+        @include adaptiveDesktopToMobile('padding-right', 40, 20);
+        @include adaptiveDesktopToMobile('padding-left', 40, 20);
+      }
+    }
+  }
+}
+.banner__wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  
+  .banner__slider {
+    width: 770px;
+    grid-row: span 2;
+    height: 500px;
+  }
+
+  .banner__slide {
+    height: auto;
+  }
+
+  .card {
+    width: auto;
+    min-height: 235px;
+  }
+
+  @include viewport--1279 {
+    grid-template-columns: 1fr 1fr;
+
+    .banner__slider {
+      width: 100%;
+      grid-row: auto;
+      grid-column: span 2;
+    } 
+  }
+
+  @include viewport--767 {
+    grid-template-columns: auto;
+    gap: 20px;
+
+    .banner__slider {
+      grid-column: auto;
+      height: 550px;
+    }
   }
 }
 .banner__slider {

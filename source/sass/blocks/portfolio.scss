@@ -1,0 +1,118 @@
+.portfolio {
+
+  &--type-2 {
+    .portfolio__cards-list {
+      @include viewport--1023 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .portfolio__cards-list-item {
+      &:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+
+        .card__img-wrapper {
+          height: 470px;
+
+          @include viewport--1279 {
+            @include adaptiveDesktopToMobile('height', 470, 265);
+          }
+        }
+      }
+    }
+
+    .card {
+      height: 100%;
+    }
+
+    .card__img-wrapper {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      width: 100%;
+      height: 170px;
+
+      @include viewport--1279 {
+        @include adaptiveDesktopToMobile('height', 170, 100);
+      }
+    }
+  }
+}
+.portfolio__top-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.portfolio__title {
+  line-height: 1.23;
+}
+.portfolio__more-btn {
+}
+.portfolio__more-btn-text {
+  white-space: nowrap;
+
+  &--mobile {
+    display: none;
+  }
+
+  @include viewport--767 {
+    &--desktop {
+      display: none;
+    }
+  
+    &--mobile {
+      display: inline;
+    }
+  }
+}
+.portfolio__cards-list {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  .card {
+    width: auto;
+  }
+
+  @include viewport--767 {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+  }
+}
+.portfolio__cards-list-item {
+}
+.portfolio__slider {
+  margin: 0 -20px;
+  padding: 0 20px;
+
+  .swiper-slide {
+    width: 270px;
+  }
+
+  .swiper-controls {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+  }
+
+  .card__img-wrapper {
+    height: 270px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.portfolio__slider-btn.button {
+  background-color: $color-main;
+  color: $color-default-white;
+}
