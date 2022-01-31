@@ -5,6 +5,8 @@ import {initModals} from './modules/init-modals';
 
 import {bannerSlider} from './blocks/banner-slider';
 import {portfolioSlider} from './blocks/portfolio-slider';
+import {modalFeedbackInit} from './blocks/modal-feedback';
+
 
 // Utils
 // ---------------------------------
@@ -21,3 +23,5 @@ initModals();
 
 bannerSlider();
 portfolioSlider();
+modalFeedbackInit();
+

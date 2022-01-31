@@ -24,7 +24,7 @@ const initModals = () => {
   if (modalFeedback && modalFeedbackBtns.length) {
     setupModal(modalFeedback, false, modalFeedbackBtns, false, false);
   }
-  if (modalSuccess && modalSuccessBtns.length) {
+  if (modalSuccess) {
     setupModal(modalSuccess, false, modalSuccessBtns);
   }
 };

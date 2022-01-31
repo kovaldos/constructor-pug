@@ -1,0 +1,102 @@
+.modal--feedback {
+  .modal__content {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    overflow: hidden;
+
+    @include viewport--767 {
+      grid-template-columns: auto
+    }
+  }
+
+  .modal__close-btn {
+    @include viewport--767 {
+      filter: invert(1);
+    }
+  }
+
+  .modal__picture {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    @include viewport--767 {
+      height: 200px;
+    }
+  }
+
+  .modal__text {
+    padding: 30px 50px;
+
+    @include viewport--767 {
+      padding: 30px 20px;
+    }
+  }
+
+  .modal__feedback-form-input {
+    background: $color-default-white;
+    border: 1px solid $color-light-grey;
+    border-radius: 5px;
+    padding: 12px 20px;
+    width: 100%;
+    outline: none;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &::placeholder {
+      color: $color-light-grey;
+    }
+  }
+
+  .modal__feedback-form-agree {
+    margin-bottom: 15px;
+  }
+
+  .modal__feedback-form-agree-input {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .modal__feedback-form-agree-input:checked + .modal__feedback-form-agree-label {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  .modal__feedback-form-agree-label {
+    font-size: 10px;
+    line-height: 1.2;
+    padding-left: 20px;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      border: 1px solid $color-night-rider;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 4px;
+      width: 4px;
+      height: 6px;
+      border-right: 1px solid $color-night-rider;
+      border-bottom: 1px solid $color-night-rider;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: opacity $default-transition-settings;
+    }
+  }
+}
+

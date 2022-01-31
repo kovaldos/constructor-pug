@@ -61,6 +61,7 @@
     padding: 40px;
 
     background-color: $color-default-white;
+    border-radius: 5px;
 
     @include viewport--767 {
       width: 100%;
@@ -72,6 +73,11 @@
     position: absolute;
     top: 15px;
     right: 15px;
+  }
+
+  &__title {
+    font-size: 22px;
+    margin: 0 0 20px 0;
   }
 
   &--responsive {

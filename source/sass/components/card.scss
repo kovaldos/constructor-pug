@@ -202,6 +202,26 @@
     }
   }
 
+  &--with-text-overlay.card {
+    padding: 0;
+
+    .card__text {
+      background-color: $color-main;
+      width: fit-content;
+      min-width: 65%;
+    }
+
+    .card__description {
+      max-width: 230px;
+    }
+
+    &:nth-child(even) {
+      .card__text {
+        min-width: 50%;
+      }
+    }
+  }
+
   &__content {
     min-height: 250px;
     border-radius: 5px;
@@ -253,6 +273,7 @@
     @include adaptiveDesktopToMobile('padding-bottom', 15, 10);
     @include adaptiveDesktopToMobile('padding-right', 20, 15);
     @include adaptiveDesktopToMobile('padding-left', 20, 15);
+    z-index: 1;
   }
 
   &__suptitle {
