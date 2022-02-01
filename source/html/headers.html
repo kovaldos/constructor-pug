@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @@include("source/html/base/head.html")
+    <title>ProjectName — Шапка</title>
+  </head>
+  <body>
+    <div style="display: none">@@include("build/img/sprite_auto.svg")</div>
+	 
+	 <header class="header @@if (context.mod) { header--@@mod }">
+		<div class="header__wrapper">
+		  <a class="header__logo" @@if (!context.main) { href="main.html"} aria-label="Переход на главную">
+			 Логотип
+		  </a>
+	 
+		  <nav class="main-nav">
+			 <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
+				<svg width="20" height="20">
+				  <use xlink:href="#icon-burger"></use>
+				</svg>
+			 </button>
+			 <div class="main-nav__wrapper">
+				<ul class="main-nav__list">
+				  <li class="main-nav__item">
+					 <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Страница 1</a>
+				  </li>
+				  <li class="main-nav__item">
+					 <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Страница 2</a>
+				  </li>
+				  <li class="main-nav__item">
+					 <a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Страница 3</a>
+				  </li>
+				</ul>
+			 </div>
+		  </nav>
+		</div>
+	 </header>
+
+    <main></main>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
