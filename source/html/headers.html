@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		@@include("source/html/base/head.html")
+		<title>ProjectName — Шапка</title>
+	</head>
+	<body>
+		<div style="display: none">@@include("build/img/sprite_auto.svg")</div>
+		<!-- Шапка Версия 1 - начало -  -->
+		<header class="header header--version01">
+			<div class="header__wrapper">
+				<div class="container header__container">
+					<a class="header__logo" @@if (!context.main) { href="main.html"} aria-label="Переход на главную">
+						<img src="img/svg/logo-ver01.svg" alt="Логотип компании">
+					</a>
+					<nav class="main-nav">
+						<button class="main-nav__toggle btn btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
+						<svg width="25" height="17">
+							<use xlink:href="#icon-burger-menu"></use>
+						</svg>
+						</button>
+						<div class="main-nav__wrapper">
+							<ul class="main-nav__list">
+								<li class="main-nav__item">
+								<a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Меню</a>
+								</li>
+								<li class="main-nav__item">
+								<a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Каталог</a>
+								</li>
+								<li class="main-nav__item">
+								<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Услуги</a>
+								</li>
+								<li class="main-nav__item">
+								<a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 3) { href="#" }>Проекты</a>
+								</li>
+								<li class="main-nav__item">
+								<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 4) { href="#" }>Контакты</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<button type="button" data-modal="feedback" class="header__btn btn-reset btn btn-transparent">Заказать звонок</button>
+					<div class="header__icons">
+						<button type="button" class="header__search-btn btn btn-reset">
+							<svg width="20" height="20">
+								<use xlink:href="#icon-search"></use>
+							</svg>
+						</button>
+						<a href="#" class="header__link link-to-user">
+							<svg width="20" height="20">
+								<use xlink:href="#icon-user-circle"></use>
+							</svg>
+						</a>
+						<a href="cart.html" class="header__link link-to-cart">
+							<svg width="20" height="20">
+								<use xlink:href="#icon-shopping-cart"></use>
+							</svg>
+							<span class="header__cart-counter">5</span>
+						</a>	
+						</div>
+				</div>
+			</div>
+		</header>
+		<!-- Шапка Версия 1 - конец - -->
+		<!-- div-прокладка. На прод не копировать! -->
+		<div class="pad" style="width: 100%; height: 100px;"></div> 
+		<!--  -->
+		<!-- Шапка Версия 2 - начало -  -->
+		<header class="header header--version02">
+			<div class="header__wrapper header__wrapper--top">
+				<div class="container header__container">
+					<a class="header__logo" @@if (!context.main) { href="main.html"} aria-label="Переход на главную">
+						<img src="img/svg/logo-ver01.svg" alt="Логотип компании">
+					</a>
+					<div class="header__location-block">
+						<svg width="20" height="28">
+							<use xlink:href="#icon-placeholder"></use>
+						</svg>
+						<p class="header__location-current">
+							Санкт-Петербург, ул.&nbsp;Лермонтова&nbsp;18,&nbsp;5&nbsp;этаж,&nbsp;офис&nbsp;245
+						</p>
+					</div>
+					<div class="header__select custom-select">
+                  <div class="custom-select__inner">
+							<div class="custom-select__current">Санкт-Петербург</div>
+								<div class="custom-select__icon">
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down"></use>
+									</svg>
+								</div>
+                  </div>
+                  <div class="custom-select__body">
+							<label class="custom-select__label-item">Санкт-Петербург
+								<input type="hidden" name="option">
+							</label>
+							<label class="custom-select__label-item">Москва
+								<input type="hidden" name="option">
+							</label>
+							<label class="custom-select__label-item">Владивосток
+								<input type="hidden" name="option">
+							</label>
+							<label class="custom-select__label-item">Петропавловск-Камчатский
+								<input type="hidden" name="option">
+							</label>
+							<label class="custom-select__label-item">Комсомольск-на-Амуре
+								<input type="hidden" name="option">
+							</label>
+						</div>
+               </div>
+					<div class="header__call-us">
+						<a class="header__call-us-link" href="tel:+70000000000" >+7 (000) 000-00-00</a>
+						<div class="header__working-mode">
+							<span>
+								Пн-Вс: 10.00 - 19:00
+							</span>
+						</div>
+					</div>
+					<button type="button" data-modal="feedback" class="header__btn btn-reset btn btn-transparent">Заказать звонок</button>
+				</div>
+			</div>
+			<div class="header__wrapper header__wrapper--bottom">
+				<div class="container header__container">
+					<nav class="main-nav">
+						<div class="main-nav__wrapper">
+							<ul class="main-nav__list">
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Компания</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Каталог</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Услуги</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 3) { href="#" }>Проекты</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 4) { href="#" }>Курсы</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 5) { href="#" }>Информация</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 6) { href="#" }>Контакты</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<div class="header__icons">
+						<button type="button" class="header__search-btn btn btn-reset">
+							<svg width="20" height="20">
+								<use xlink:href="#icon-search"></use>
+							</svg>
+						</button>
+						<a href="#" class="header__link link-to-user">
+							<svg width="20" height="20">
+								<use xlink:href="#icon-user"></use>
+							</svg>
+						</a>
+						<a href="cart.html" class="header__link link-to-cart">
+							<svg width="20" height="20">
+								<use xlink:href="#icon-shopping-cart"></use>
+							</svg>
+							<span class="header__cart-counter">5</span>
+						</a>	
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Шапка Версия 2 - конец -  -->
+		<!-- div-прокладка. На прод не копировать! -->
+		<div class="pad" style="width: 100%; height: 100px;"></div> 
+		<!-- Шапка Версия 3 - начало -  -->
+		<header class="header header--version03">
+			<div class="header__wrapper header__wrapper--top">
+				<div class="container header__container">
+					<div class="header__call-us">
+						<a class="header__call-us-link" href="tel:+70000000000" >+7 (000) 000-00-00</a>
+						<div class="header__working-mode">
+							<span>
+								Пн-Вс: 10.00 - 19:00
+							</span>
+						</div>
+					</div>
+					<button type="button" data-modal="feedback" class="header__btn btn-reset btn btn-transparent">Заказать звонок</button>
+					<a class="header__logo" @@if (!context.main) { href="main.html"} aria-label="Переход на главную">
+						<img src="img/svg/logo-ver01.svg" alt="Логотип компании">
+					</a>
+					<div class="header__icons">
+						<button type="button" class="header__search-btn btn btn-reset">
+							<svg width="20" height="20">
+								<use xlink:href="#icon-search"></use>
+							</svg>
+						</button>
+						<a href="#" class="header__link link-to-user">
+							<svg width="20" height="20">
+								<use xlink:href="#icon-user"></use>
+							</svg>
+						</a>
+						<a href="cart.html" class="header__link link-to-cart">
+							<svg width="20" height="20">
+								<use xlink:href="#icon-shopping-cart"></use>
+							</svg>
+							<span class="header__cart-counter">5</span>
+						</a>	
+					</div>
+				</div>
+			</div>
+			<div class="header__wrapper header__wrapper--bottom">
+				<div class="container header__container">
+					<nav class="main-nav">
+						<div class="main-nav__wrapper">
+							<ul class="main-nav__list">
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Компания</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Каталог</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Услуги</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 3) { href="#" }>Проекты</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 4) { href="#" }>Курсы</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 5) { href="#" }>Информация</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 6) { href="#" }>Контакты</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+
+				</div>
+			</div>
+		</header>
+		<!-- Шапка Версия 3 - конец -  -->
+		<!-- div-прокладка. На прод не копировать! -->
+		<div class="pad" style="width: 100%; height: 100px;"></div>
+		<!-- Шапка Версия 4 - начало -  -->
+		<header class="header header--version04">
+			<div class="header__wrapper header__wrapper--top">
+				<div class="container header__container">
+					<div class="header__call-us">
+						<svg width="24" height="24">
+							<use xlink:href="#icon-phone"></use>
+						</svg>
+						<a class="header__call-us-link" href="tel:+70000000000" >+7 (000) 000-00-00</a>
+					</div>
+					<button type="button" data-modal="feedback" class="header__btn btn-reset btn btn-transparent">Заказать звонок</button>
+					<div class="header__location-block">
+						<svg width="20" height="28">
+							<use xlink:href="#icon-placeholder"></use>
+						</svg>
+						<p class="header__location-current">
+							Санкт-Петербург, ул.&nbsp;Лермонтова&nbsp;18,&nbsp;5&nbsp;этаж,&nbsp;офис&nbsp;245
+						</p>
+					</div>
+					<div class="header__icons">
+						<a href="#" class="header__link link-to-user">
+							<svg width="20" height="20">
+								<use xlink:href="#icon-user"></use>
+							</svg>
+						</a>
+						<a href="cart.html" class="header__link link-to-cart">
+							<svg width="20" height="20">
+								<use xlink:href="#icon-shopping-cart"></use>
+							</svg>
+							<span class="header__cart-counter">5</span>
+						</a>	
+					</div>
+				</div>
+			</div>
+			<div class="header__wrapper header__wrapper--bottom">
+				<div class="container header__container">
+					<a class="header__logo" @@if (!context.main) { href="main.html"} aria-label="Переход на главную">
+						<img src="img/svg/logo-ver01.svg" alt="Логотип компании">
+					</a>
+					<nav class="main-nav">
+						<div class="main-nav__wrapper">
+							<ul class="main-nav__list">
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Компания</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Каталог</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Услуги</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 3) { href="#" }>Проекты</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 4) { href="#" }>Курсы</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 5) { href="#" }>Информация</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 6) { href="#" }>Контакты</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<button type="button" class="header__search-btn btn btn-reset">
+						<svg width="20" height="20">
+							<use xlink:href="#icon-search"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</header>
+		<!-- Шапка Версия 4 - конец -  -->
+		<!-- div-прокладка. На прод не копировать! -->
+		<div class="pad" style="width: 100%; height: 100px;"></div>
+		<!-- Шапка Версия 4 - начало -  -->
+		<header class="header header--version05">
+			<div class="header__wrapper header__wrapper--top">
+				<div class="container header__container">
+					<a class="header__logo" @@if (!context.main) { href="main.html"} aria-label="Переход на главную">
+						<img src="img/svg/logo-ver01.svg" alt="Логотип компании">
+					</a>
+					<div class="header__search-wrapper">
+						<label class="header__search-label">
+							<input class="header__search-input" type="search" name="search" id="search">
+						</label>
+						<button type="button" class="header__search-btn btn btn-reset">
+							<svg width="20" height="20">
+								<use xlink:href="#icon-search"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="header__call-us">
+						<a class="header__call-us-link" href="tel:+70000000000" >+7 (000) 000-00-00</a>
+						<div class="header__working-mode">
+							<span>
+								Пн-Вс: 10.00 - 19:00
+							</span>
+						</div>
+					</div>
+					<div class="header__icons">
+						<a href="#" class="header__link link-to-user">
+							<svg width="20" height="20">
+								<use xlink:href="#icon-user"></use>
+							</svg>
+						</a>
+						<a href="cart.html" class="header__link link-to-cart">
+							<svg width="20" height="20">
+								<use xlink:href="#icon-shopping-cart"></use>
+							</svg>
+							<span class="header__cart-counter">5</span>
+						</a>	
+					</div>
+				</div>
+			</div>
+			<div class="header__wrapper header__wrapper--bottom">
+				<div class="container header__container">
+					<nav class="main-nav">
+						<div class="main-nav__wrapper">
+							<ul class="main-nav__list">
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Компания</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Каталог</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Услуги</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 3) { href="#" }>Проекты</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 4) { href="#" }>Курсы</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 5) { href="#" }>Информация</a>
+									<svg width="10" height="10" aria-hidden="true">
+										<use xlink:href="#icon-arrow-down-currentColor"></use>
+									</svg>
+								</li>
+								<li class="main-nav__item">
+									<a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 6) { href="#" }>Контакты</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!-- Шапка Версия 4 - конец -  -->
+		<main></main>
+		<footer></footer>
+		@@include("source/html/base/modal.html", {
+			"name": "feedback"
+		})
+		<script src="js/vendor.min.js"></script>
+		<script src="js/main.min.js"></script>
+	</body>
+</html>

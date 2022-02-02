@@ -14,8 +14,8 @@ $color-cinnabar:                  #E23E1A;
 $color-whisper:                   #EEEEEE;
 $color-light-grey:                #D7D7D7;
 $color-night-rider:               #333333;
-
-
+$color-ocean-green:	             #4A9B7A;
+$color-nobel:                     #959595;
 $color-main: $color-jade;
 
 // Typography
@@ -26,7 +26,7 @@ $font-family--default:                     "Proxima Nova", "Arial", sans-serif;
 // Animation
 //---------------------------------
 
-$default-transition-settings:       0.3s ease;
+$default-transition-settings:       0.3s ease 0s;
 $modal-transition-settings:         0.6s cubic-bezier(0.55, 0, 0.1, 1);
 
 // Viewports

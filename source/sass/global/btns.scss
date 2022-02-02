@@ -1,0 +1,16 @@
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border-radius: 0.5em;
+	transition: all $default-transition-settings;
+	&:focus-visible {
+		outline: none;
+		box-shadow: 0 0 2px 2px $color-light-grey;
+	}
+	&-transparent {
+		background-color: transparent;
+		border: 1px solid $color-dark-gray
+	}
+}
