@@ -14,7 +14,7 @@
 						<img src="img/svg/logo-ver01.svg" alt="Логотип компании">
 					</a>
 					<nav class="main-nav">
-						<button class="main-nav__toggle btn btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
+						<button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
 						<svg width="25" height="17">
 							<use xlink:href="#icon-burger-menu"></use>
 						</svg>
@@ -39,9 +39,9 @@
 							</ul>
 						</div>
 					</nav>
-					<button type="button" data-modal="feedback" class="header__btn btn-reset btn btn-transparent">Заказать звонок</button>
+					<button type="button" data-modal="feedback" class="header__btn button button--stroke">Заказать звонок</button>
 					<div class="header__icons">
-						<button type="button" class="header__search-btn btn btn-reset">
+						<button type="button" class="header__search-btn btn-reset">
 							<svg width="20" height="20">
 								<use xlink:href="#icon-search"></use>
 							</svg>
@@ -96,6 +96,9 @@
 							<label class="custom-select__label-item">Москва
 								<input type="hidden" name="option">
 							</label>
+							<label class="custom-select__label-item">Тула
+								<input type="hidden" name="option">
+							</label>
 							<label class="custom-select__label-item">Владивосток
 								<input type="hidden" name="option">
 							</label>
@@ -115,7 +118,7 @@
 							</span>
 						</div>
 					</div>
-					<button type="button" data-modal="feedback" class="header__btn btn-reset btn btn-transparent">Заказать звонок</button>
+					<button type="button" data-modal="feedback" class="header__btn button button--stroke">Заказать звонок</button>
 				</div>
 			</div>
 			<div class="header__wrapper header__wrapper--bottom">
@@ -166,7 +169,7 @@
 						</div>
 					</nav>
 					<div class="header__icons">
-						<button type="button" class="header__search-btn btn btn-reset">
+						<button type="button" class="header__search-btn btn-reset">
 							<svg width="20" height="20">
 								<use xlink:href="#icon-search"></use>
 							</svg>
@@ -201,12 +204,12 @@
 							</span>
 						</div>
 					</div>
-					<button type="button" data-modal="feedback" class="header__btn btn-reset btn btn-transparent">Заказать звонок</button>
+					<button type="button" data-modal="feedback" class="header__btn button button--stroke">Заказать звонок</button>
 					<a class="header__logo" @@if (!context.main) { href="main.html"} aria-label="Переход на главную">
 						<img src="img/svg/logo-ver01.svg" alt="Логотип компании">
 					</a>
 					<div class="header__icons">
-						<button type="button" class="header__search-btn btn btn-reset">
+						<button type="button" class="header__search-btn btn-reset">
 							<svg width="20" height="20">
 								<use xlink:href="#icon-search"></use>
 							</svg>
@@ -289,7 +292,7 @@
 						</svg>
 						<a class="header__call-us-link" href="tel:+70000000000" >+7 (000) 000-00-00</a>
 					</div>
-					<button type="button" data-modal="feedback" class="header__btn btn-reset btn btn-transparent">Заказать звонок</button>
+					<button type="button" data-modal="feedback" class="header__btn btn-reset">Заказать звонок</button>
 					<div class="header__location-block">
 						<svg width="20" height="28">
 							<use xlink:href="#icon-placeholder"></use>
@@ -363,7 +366,7 @@
 							</ul>
 						</div>
 					</nav>
-					<button type="button" class="header__search-btn btn btn-reset">
+					<button type="button" class="header__search-btn btn-reset">
 						<svg width="20" height="20">
 							<use xlink:href="#icon-search"></use>
 						</svg>
@@ -374,7 +377,7 @@
 		<!-- Шапка Версия 4 - конец -  -->
 		<!-- div-прокладка. На прод не копировать! -->
 		<div class="pad" style="width: 100%; height: 100px;"></div>
-		<!-- Шапка Версия 4 - начало -  -->
+		<!-- Шапка Версия 5 - начало -  -->
 		<header class="header header--version05">
 			<div class="header__wrapper header__wrapper--top">
 				<div class="container header__container">
@@ -385,7 +388,7 @@
 						<label class="header__search-label">
 							<input class="header__search-input" type="search" name="search" id="search">
 						</label>
-						<button type="button" class="header__search-btn btn btn-reset">
+						<button type="button" class="header__search-btn btn-reset">
 							<svg width="20" height="20">
 								<use xlink:href="#icon-search"></use>
 							</svg>
@@ -464,7 +467,8 @@
 				</div>
 			</div>
 		</header>
-		<!-- Шапка Версия 4 - конец -  -->
+		<!-- Шапка Версия 5 - конец -  -->
+
 		<main></main>
 		<footer></footer>
 		@@include("source/html/base/modal.html", {

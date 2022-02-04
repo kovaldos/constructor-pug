@@ -7,6 +7,7 @@ import {bannerSlider} from './blocks/banner-slider';
 import {portfolioSlider} from './blocks/portfolio-slider';
 import {modalFeedbackInit} from './blocks/modal-feedback';
 import {initCustomSelect} from './modules/custom-select';
+import {initAccordions} from './modules/init-accordion';
 
 
 // Utils
@@ -19,6 +20,7 @@ iosVhFix();
 // ---------------------------------
 initCustomSelect();
 initModals();
+initAccordions();
 
 // Blocks
 

@@ -18,11 +18,11 @@ const modalFeedbackInit = () => {
           modalFeedbackFrom.reset();
 
           openModal(modalSuccess);
-        })
-      })
+        });
+      });
     }
-  })
-}
+  });
+};
 
 export {modalFeedbackInit};
 
