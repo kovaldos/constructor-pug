@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>ProjectName — Личный кабинет - Настройка подписки</title>
+
+</head>
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <main>
+    <header class="header header--inner">
+      <div class="container">
+        <h1 class="header__title">Личный кабинет</h1>
+        <div class="header__breadcrumbs">
+          <a href="#" class="header__breadcrumbs-link">Главная</a>
+          <div class="header__breadcrumbs-delimiter">></div>
+          <a href="#" class="header__breadcrumbs-link">Личный кабинет</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="account">
+      <div class="container">
+        <div class="account__wrapper inner-page-wrapper">
+          <nav class="account__menu aside-menu">
+            <ul class="aside-menu__list">
+              <li class="aside-menu__list-item">
+                <a href="#" class="aside-menu__link">Персональные данные</a>
+              </li>
+              <li class="aside-menu__list-item">
+                <a href="#" class="aside-menu__link aside-menu__link--active">Настройки подписки</a>
+              </li>
+              <li class="aside-menu__list-item">
+                <a href="#" class="aside-menu__link">Материалы</a>
+              </li>
+            </ul>
+            <a href="#" class="account__logout">Выйти</a>
+          </nav>
+          <div class="innner-page-content">
+            <form action="" class="account__subscription">
+              <h2 class="account__subscription-title title-h3">Настройки подписки</h2>
+              <div class="account__subscription-email">
+                <input type="email" class="input" placeholder="Почта">
+                <p class="account__subscription-email-description">Письма с рассылками будут приходить на данный адрес электронной почты</p>
+              </div>
+              <div class="account__subscription-agree">
+                <input type="checkbox" class="account__subscription-agree-input" id="account__subscription-agree-input" required="">
+                <label class="account__subscription-agree-label" for="account__subscription-agree-input">Я согласен на обработку моих персональных данных, а также с Пользовательским соглашением</label>
+              </div>
+              <div class="account__subscription-news switch">
+                <input type="checkbox" id="account__subscription-news-input">
+                <label for="account__subscription-news-input">Получать последние новости</label>
+              </div>
+              <div class="account__subscription-promotion switch">
+                <input type="checkbox" id="account__subscription-promotion-input">
+                <label for="account__subscription-promotion-input">Получать выгодные акции</label>
+              </div>
+              <button class="account__subscription-submit button">Сохранить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>

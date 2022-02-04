@@ -1,0 +1,51 @@
+.switch {
+  input {
+    opacity: 0;
+    position: absolute;
+
+    &:checked {
+      & + label {
+        &::before {
+          border-color: $color-jade;
+        }
+
+        &::after {
+          background-color: $color-jade;
+          left: 15px;
+        }
+      }
+    }
+  }
+
+  label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 45px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      border: 1px solid $color-whisper;
+      border-radius: 14px;
+      width: 30px;
+      height: 15px;
+      transition: border-color $default-transition-settings;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 4px;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      background-color: $color-whisper;
+      border-radius: 50%;
+      transition: left $default-transition-settings, background-color $default-transition-settings;
+    }
+  }
+}

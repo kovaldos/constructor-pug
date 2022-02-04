@@ -1,0 +1,10 @@
+.inner-page-wrapper {
+  @include adaptiveDesktopToMobile('margin-top', 40, 30);
+  display: grid;
+  grid-template-columns: 300px auto;
+  @include adaptiveDesktopToMobile('gap', 100, 60);
+
+  @include viewport--767 {
+    grid-template-columns: auto;
+  }
+}

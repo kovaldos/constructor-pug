@@ -1,0 +1,42 @@
+.benefits {
+  @include adaptiveDesktopToMobile('padding-top', 80, 35);
+  @include adaptiveDesktopToMobile('padding-bottom', 80, 35);
+}
+.benefits__cards {
+  @include reset-list;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @include viewport--1023 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include viewport--767 {
+    grid-template-columns: auto;
+  }
+
+  &--type-2 {
+    grid-template-columns: repeat(3, 1fr);
+
+    @include viewport--767 {
+      .benefits__card.card {
+        text-align: left;
+      }
+    }
+  }
+}
+.benefits__card.card {
+  box-shadow: none;
+  width: auto;
+
+  @include viewport--767 {
+    text-align: center;
+
+    .card__img {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}

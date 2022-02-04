@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>ProjectName — Личный кабинет - Персональные данные</title>
+
+</head>
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <main>
+    <header class="header header--inner">
+      <div class="container">
+        <h1 class="header__title">Личный кабинет</h1>
+        <div class="header__breadcrumbs">
+          <a href="#" class="header__breadcrumbs-link">Главная</a>
+          <div class="header__breadcrumbs-delimiter">></div>
+          <a href="#" class="header__breadcrumbs-link">Личный кабинет</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="account">
+      <div class="container">
+        <div class="account__wrapper inner-page-wrapper">
+          <nav class="account__menu aside-menu">
+            <ul class="aside-menu__list">
+              <li class="aside-menu__list-item">
+                <a href="#" class="aside-menu__link aside-menu__link--active">Персональные данные</a>
+              </li>
+              <li class="aside-menu__list-item">
+                <a href="#" class="aside-menu__link">Настройки подписки</a>
+              </li>
+              <li class="aside-menu__list-item">
+                <a href="#" class="aside-menu__link">Материалы</a>
+              </li>
+            </ul>
+            <a href="#" class="account__logout">Выйти</a>
+          </nav>
+          <div class="innner-page-content">
+            <form action="" class="account__personal">
+              <div class="account__contacts">
+                <h2 class="account__contacts-title title-h3">Контактные данные</h2>
+                <input type="text" class="input" placeholder="Имя">
+                <input type="text" class="input" placeholder="Телефон">
+                <input type="text" class="input" placeholder="Почта">
+              </div>
+              <div class="account__password">
+                <h2 class="account__password-title title-h3">Изменить пароль</h2>
+                <input type="text" class="input" placeholder="Новый пароль">
+                <input type="text" class="input" placeholder="Повторите новый пароль">
+              </div>
+              <button class="account__personal-submit button">Сохранить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>

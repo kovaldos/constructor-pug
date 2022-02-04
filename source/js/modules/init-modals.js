@@ -5,6 +5,10 @@ const modalFeedback = document.querySelector('.modal--feedback');
 const modalFeedbackBtns = document.querySelectorAll('[data-modal="feedback"]');
 const modalSuccess = document.querySelector('.modal--success');
 const modalSuccessBtns = document.querySelectorAll('[data-modal="success"]');
+const modalLogin = document.querySelector('.modal--login');
+const modalLoginBtns = document.querySelectorAll('[data-modal="login"]');
+const modalRegistration = document.querySelector('.modal--registration');
+const modalRegistrationBtns = document.querySelectorAll('[data-modal="registration"]');
 
 // аргументы setupModal(modal, closeCallback, modalBtns, openCallback, noPrevDefault, preventScrollLock)
 // возможна инициализация только с первыми аргументом,
@@ -26,6 +30,12 @@ const initModals = () => {
   }
   if (modalSuccess) {
     setupModal(modalSuccess, false, modalSuccessBtns);
+  }
+  if (modalLogin) {
+    setupModal(modalLogin, false, modalLoginBtns, false, false);
+  }
+  if (modalRegistration) {
+    setupModal(modalRegistration, false, modalRegistrationBtns, false, false);
   }
 };
 

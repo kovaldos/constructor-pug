@@ -1,5 +1,6 @@
 .link {
   transition: all $default-transition-settings;
+  cursor: pointer;
 
   &:hover {
     color: $color-main;

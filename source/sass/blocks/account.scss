@@ -1,0 +1,137 @@
+.account {
+}
+.account__wrapper {
+  padding: 30px;
+  border: 1px solid $color-light-grey;
+  border-radius: 5px;
+
+  @include viewport--767 {
+    padding: 30px 0;
+    border-left: unset;
+    border-right: unset;
+    border-bottom: unset;
+  }
+}
+.account__menu {
+}
+.account__logout {
+  display: block;
+  margin-top: 55px;
+  background: $color-tomato;
+  border-radius: 5px;
+  color: $color-default-white;
+  padding: 15px 20px;
+}
+.account__personal {
+  .input {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+.account__contacts {
+  margin-bottom: 50px;
+}
+.account__contacts-title {
+  margin-bottom: 30px;
+}
+.account__password {
+  margin-bottom: 50px;
+}
+.account__password-title {
+  margin-bottom: 30px;
+}
+.account__personal-submit {
+  margin-bottom: 20px;
+}
+
+.account__subscription {
+}
+.account__subscription-title {
+  margin-bottom: 30px;
+}
+.account__subscription-email {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  .input {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  @include viewport--1023 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.account__subscription-email-description {
+  font-size: 12px;
+  margin-left: 30px;
+  max-width: 300px;
+
+  @include viewport--1023 {
+    margin: 15px 0 0 0;
+  }
+}
+
+.account__subscription-agree {
+  margin-bottom: 50px;
+}
+.account__subscription-agree-input {
+  opacity: 0;
+  position: absolute;
+}
+
+.account__subscription-agree-input:checked + .account__subscription-agree-label {
+  &::after {
+    opacity: 1;
+  }
+}
+
+.account__subscription-agree-label {
+  font-size: 12px;
+  line-height: 1.2;
+  padding-left: 20px;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  max-width: 320px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border: 1px solid $color-night-rider;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 4px;
+    height: 6px;
+    border-right: 1px solid $color-night-rider;
+    border-bottom: 1px solid $color-night-rider;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity $default-transition-settings;
+  }
+}
+.account__subscription-news {
+  margin-bottom: 15px;
+}
+.account__subscription-promotion {
+}
+.account__subscription-submit {
+  margin-top: 60px;
+}

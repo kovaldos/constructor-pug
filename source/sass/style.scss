@@ -27,6 +27,8 @@
 @import "blocks/footers";
 @import "blocks/modal";
 @import "blocks/modal-feedback";
+@import "blocks/modal-login";
+@import "blocks/modal-registration";
 @import "blocks/services";
 @import "blocks/catalog";
 @import "blocks/banners";
@@ -34,6 +36,10 @@
 @import "blocks/portfolio";
 @import "blocks/sales";
 @import "blocks/contacts-section";
+@import "blocks/benefits";
+@import "blocks/inner-page-wrapper";
+@import "blocks/aside-menu";
+@import "blocks/account";
 
 // Components
 //---------------------------------
@@ -44,3 +50,4 @@
 @import "components/input";
 @import "components/link";
 @import "components/social-link";
+@import "components/switch";
