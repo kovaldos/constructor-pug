@@ -1,0 +1,32 @@
+.aside-menu {
+  height: fit-content;
+}
+.aside-menu__list {
+  @include reset-list;
+
+  border: 1px solid $color-light-grey;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.aside-menu__list-item {
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-light-grey;
+  }
+}
+.aside-menu__link {
+  display: block;
+  padding: 15px 20px;
+  font-size: 16px;
+  transition: background-color $default-transition-settings, color $default-transition-settings;
+
+  &:hover {
+    background-color: $color-main;
+    color: $color-default-white;
+  }
+
+  &--active {
+    background-color: $color-main;
+    color: $color-default-white;
+  }
+}

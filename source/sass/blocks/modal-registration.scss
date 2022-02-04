@@ -1,0 +1,86 @@
+.modal--registration {
+  .modal__content {
+    @include adaptiveDesktopToMobile('padding', 60, 30);
+    @include adaptiveDesktopToMobile('padding-top', 60, 60);
+  }
+}
+
+.modal__registration-form {
+  @include adaptiveDesktopToMobile('max-width', 340, 275);
+}
+.modal__registration-form-input {
+  width: 100%;
+  border: 1px solid $color-light-grey;
+  border-radius: 5px;
+  padding: 12px 20px;
+  outline: none;
+  margin-bottom: 20px;
+
+  &::placeholder {
+    color: $color-light-grey;
+  }
+
+}
+.modal__registration-form-telephone {
+}
+.modal__registration-form-password {
+}
+.modal__registration-form-remember {
+}
+.modal__registration-submit {
+  margin-top: 30px;
+}
+
+.modal__registration-login {
+  margin-top: 20px;
+
+  button {
+    background-color: transparent;
+    border: unset;
+    text-decoration: underline;
+  }
+}
+.modal__registration-form-agree-input {
+  opacity: 0;
+  position: absolute;
+}
+
+.modal__registration-form-agree-input:checked + .modal__registration-form-agree-label {
+  &::after {
+    opacity: 1;
+  }
+}
+
+.modal__registration-form-agree-label {
+  font-size: 12px;
+  line-height: 1.2;
+  padding-left: 20px;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border: 1px solid $color-night-rider;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 4px;
+    height: 6px;
+    border-right: 1px solid $color-night-rider;
+    border-bottom: 1px solid $color-night-rider;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity $default-transition-settings;
+  }
+}

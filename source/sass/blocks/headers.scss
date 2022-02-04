@@ -731,4 +731,26 @@
 			}
 		}
 	}
+	&--inner {
+		background-color: $color-main;
+		color: $color-default-white;
+		@include adaptiveDesktopToMobile('padding-top', 40, 35);
+		@include adaptiveDesktopToMobile('padding-bottom', 35, 30);
+
+		.header__title {
+			font-weight: bold;
+			font-size: 36px;
+			margin: 0 0 5px 0;
+		}
+		.header__breadcrumbs {
+			display: flex;
+			align-items: center;
+		}
+		.header__breadcrumbs-link {
+			color: inherit;
+		}
+		.header__breadcrumbs-delimiter {
+			margin: 0 10px;
+		}
+	}
 }

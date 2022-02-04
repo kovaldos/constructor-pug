@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>ProjectName — Вход в личный кабинет</title>
+
+</head>
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <main>
+    <div class="container">
+      <button style="margin-top: 50px;" class="button" data-modal="login">Войти</button>
+    </div>
+  </main>
+
+  @@include("source/html/base/modal.html", {
+    "name": "login",
+    "fitContent": true,
+  })
+
+  @@include("source/html/base/modal.html", {
+    "name": "registration",
+    "fitContent": true,
+  })
+
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>
