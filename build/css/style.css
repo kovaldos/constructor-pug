@@ -5866,6 +5866,13 @@ button,
   gap: 100px;
 }
 
+.innner-page-title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 1.21;
+  margin: 0 0 30px 0;
+}
+
 .aside-menu {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -5901,6 +5908,10 @@ button,
 .aside-menu__link--active {
   background-color: #00B76C;
   color: #ffffff;
+}
+
+.account {
+  overflow: hidden;
 }
 
 .account__wrapper {
@@ -6029,6 +6040,97 @@ button,
 
 .account__subscription-submit {
   margin-top: 60px;
+}
+
+.account__materials {
+  max-width: 90vw;
+}
+
+.account__materials-links-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.account__materials-links-list-item {
+  margin-right: 50px;
+}
+
+.account__materials-link {
+  font-size: 16px;
+  padding-bottom: 10px;
+  white-space: nowrap;
+}
+
+.account__materials-link--active {
+  color: #00B76C;
+  border-bottom: 1px solid #00B76C;
+}
+
+.account__materials-cards-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.account__materials-card.card {
+  width: auto;
+  max-width: 270px;
+}
+
+.about__picture {
+  margin-bottom: 30px;
+}
+
+.about__section {
+  margin-bottom: 30px;
+}
+
+.about__section-title {
+  margin: 0 0 20px 0;
+}
+
+.about__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0 0 15px 0;
+}
+
+.about__list-item {
+  position: relative;
+  padding: 0 0 0 20px;
+}
+
+.about__list-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.about__list-item::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #00B76C;
 }
 
 .button {
@@ -7739,6 +7841,18 @@ button,
   .account__subscription-email-description {
     margin: 15px 0 0 0;
   }
+
+  .account__materials-links-list {
+    max-width: 60%;
+    overflow-x: scroll;
+    height: 45px;
+  }
+
+  .account__materials-cards-list {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    width: 100%;
+  }
 }
 
 @media (max-width: 1023px) and (max-width: 1023px) {
@@ -8047,6 +8161,18 @@ button,
     border-left: unset;
     border-right: unset;
     border-bottom: unset;
+  }
+
+  .account__materials-links-list {
+    max-width: 100%;
+  }
+
+  .account__materials-card.card {
+    max-width: 100%;
+  }
+
+  .account__materials-card.card .card__img-wrapper {
+    width: 100%;
   }
 }
 
