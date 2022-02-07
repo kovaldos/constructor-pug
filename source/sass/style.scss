@@ -14,15 +14,17 @@
 @import "global/utils";
 @import "global/common";
 @import "global/components";
-@import "global/btns";
 @import "global/custom-select";
+@import "global/data-accordion";
+@import "global/accordion";
 
 // Blocks
 //---------------------------------
 
 // @import "blocks/header";
 @import "blocks/headers";
-@import "blocks/footer";
+// @import "blocks/footer";
+@import "blocks/footers";
 @import "blocks/modal";
 @import "blocks/modal-feedback";
 @import "blocks/modal-login";

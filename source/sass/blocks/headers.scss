@@ -30,6 +30,7 @@
 				height: 60px;
 			}
 			&__btn {
+				min-width: 163px;
 				border: 2px solid $color-ocean-green;
 				border-radius: 50px;
 				font-weight: 600;
@@ -166,6 +167,7 @@
 				pointer-events: none;
 			}
 			&__btn {
+				min-width: 163px;
 				padding: 12px 20px;
 				font-weight: 600;
 				font-size: 14px;
@@ -307,6 +309,7 @@
 				pointer-events: none;
 			}
 			&__btn {
+				min-width: 163px;
 				padding: 12px 20px;
 				font-weight: 600;
 				font-size: 14px;

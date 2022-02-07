@@ -9,6 +9,7 @@ import {modalFeedbackInit} from './blocks/modal-feedback';
 import {modalLoginInit} from './blocks/modal-login';
 import {modalRegistrationInit} from './blocks/modal-registration';
 import {initCustomSelect} from './modules/custom-select';
+import {initAccordions} from './modules/init-accordion';
 
 
 // Utils
@@ -21,6 +22,7 @@ iosVhFix();
 // ---------------------------------
 initCustomSelect();
 initModals();
+initAccordions();
 
 // Blocks
 
