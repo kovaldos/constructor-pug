@@ -1,0 +1,51 @@
+.history {
+  padding-bottom: 40px;
+}
+.history__paragraph {
+}
+.history__dates {
+  @include reset-list;
+
+  margin-top: 40px;
+}
+.history__date {
+  display: flex;
+  position: relative;
+
+  &:not(:last-child) {
+    padding-bottom: 34px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50px;
+      left: 30px;
+      width: 1px;
+      height: 60%;
+      background-color: $color-silver;
+    }
+  }
+
+  @include viewport--767 {
+    flex-direction: column;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+.history__date-number {
+  margin-right: 36px;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 28px;
+
+  @include viewport--767 {
+    margin-bottom: 10px;
+  }
+}
+.history__date-description {
+  margin: 0;
+  padding: 20px;
+  background-color: $color-white-smoke;
+}

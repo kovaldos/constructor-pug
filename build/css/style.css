@@ -6133,6 +6133,110 @@ button,
   background-color: #00B76C;
 }
 
+.history {
+  padding-bottom: 40px;
+}
+
+.history__dates {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 40px;
+}
+
+.history__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.history__date:not(:last-child) {
+  padding-bottom: 34px;
+}
+
+.history__date:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  width: 1px;
+  height: 60%;
+  background-color: #BBBBBB;
+}
+
+.history__date-number {
+  margin-right: 36px;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.history__date-description {
+  margin: 0;
+  padding: 20px;
+  background-color: #F3F3F3;
+}
+
+.company-partners {
+  padding-bottom: 40px;
+}
+
+.company-partners__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.company-partners__card {
+  padding: 30px;
+  border: 2px solid #EEEEEE;
+  border-radius: 5px;
+}
+
+.company-partners__card-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.company-partners__card-email::before {
+  content: '';
+  background-image: url("../img/svg/email.svg");
+  margin-right: 10px;
+  width: 20px;
+  height: 13px;
+  display: block;
+}
+
+.company-partners__card-telephone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.company-partners__card-telephone::before {
+  content: '';
+  background-image: url("../img/svg/telephone.svg");
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
 .button {
   cursor: pointer;
   border: none;
@@ -7853,6 +7957,11 @@ button,
     grid-template-columns: auto;
     width: 100%;
   }
+
+  .company-partners__list {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+  }
 }
 
 @media (max-width: 1023px) and (max-width: 1023px) {
@@ -8173,6 +8282,21 @@ button,
 
   .account__materials-card.card .card__img-wrapper {
     width: 100%;
+  }
+
+  .history__date {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .history__date::before {
+    display: none;
+  }
+
+  .history__date-number {
+    margin-bottom: 10px;
   }
 }
 
