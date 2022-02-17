@@ -1,0 +1,31 @@
+.company-requisites {
+}
+.company-requisites__list {
+  @include reset-list;
+
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+}
+.company-requisites__item {
+  padding: 15px;
+  @include adaptiveDesktopToMobile('padding-left', 40, 15);
+  @include adaptiveDesktopToMobile('padding-right', 40, 15);
+  display: grid;
+  grid-template-columns: 230px auto;
+  gap: 5px;
+  font-size: 16px;
+  line-height: 150%;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-whisper;
+  }
+
+  @include viewport--1023 {
+    grid-template-columns: auto;
+  }
+}
+.company-requisites__item-name {
+  font-weight: bold;
+}
+.company-requisites__item-value {
+}

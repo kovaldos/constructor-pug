@@ -1,0 +1,103 @@
+.company-reviews {
+}
+.company-reviews__feedback {
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  padding: 40px;
+  @include adaptiveDesktopToMobile('padding-left', 40, 35);
+  @include adaptiveDesktopToMobile('padding-right', 40, 35);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include viewport--1023 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.company-reviews__feedback-text {
+}
+.company-reviews__feedback-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+.company-reviews__feedback-description {
+  font-size: 16px;
+  color: $color-matterhorn;
+}
+.company-reviews__feedback-btn {
+
+  @include viewport--1023 {
+    margin-top: 25px;
+  }
+}
+.company-reviews__list {
+  @include reset-list;
+
+  margin-top: 30px;
+}
+.company-reviews__card {
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  padding: 30px 35px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  font-size: 16px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @include viewport--1023 {
+    grid-template-columns: auto;
+  }
+}
+.company-reviews__card-who {
+  display: flex;
+}
+.company-reviews__card-who-picture {
+  border-radius: 50%;
+  max-width: 70px;
+  max-height: 70px;
+  margin-right: 20px;
+}
+.company-reviews__card-who-right-wrapper {
+}
+.company-reviews__card-who-name {
+  font-weight: bold;
+  max-width: 200px;
+  margin: 0 0 10px 0;
+}
+.company-reviews__card-grade {
+  width: 80px;
+  height: 15px;
+  background-repeat: no-repeat;
+  
+  &--1 {
+    background-image: url(../../img/svg/review-grade-1.svg);
+  }
+  &--2 {
+    background-image: url(../../img/svg/review-grade-2.svg);
+  }
+  &--3 {
+    background-image: url(../../img/svg/review-grade-3.svg);
+  }
+  &--4 {
+    background-image: url(../../img/svg/review-grade-4.svg);
+  }
+  &--5 {
+    background-image: url(../../img/svg/review-grade-5.svg);
+  }
+}
+.company-reviews__card-text {
+  line-height: 150%;
+}
+.company-reviews__card-title {
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+.company-reviews__card-description {
+  color: $color-matterhorn;
+}
