@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>ProjectName — Личный кабинет - Материалы</title>
+
+</head>
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <main>
+    <header class="header header--inner">
+      <div class="container">
+        <h1 class="header__title">Личный кабинет</h1>
+        <div class="header__breadcrumbs">
+          <a href="#" class="header__breadcrumbs-link">Главная</a>
+          <div class="header__breadcrumbs-delimiter">></div>
+          <a href="#" class="header__breadcrumbs-link">Личный кабинет</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="account">
+      <div class="container">
+        <div class="account__wrapper inner-page-wrapper">
+          <nav class="account__menu aside-menu">
+            <ul class="aside-menu__list">
+              <li class="aside-menu__list-item">
+                <a href="#" class="aside-menu__link">Персональные данные</a>
+              </li>
+              <li class="aside-menu__list-item">
+                <a href="#" class="aside-menu__link">Настройки подписки</a>
+              </li>
+              <li class="aside-menu__list-item">
+                <a href="#" class="aside-menu__link aside-menu__link--active">Материалы</a>
+              </li>
+            </ul>
+            <a href="#" class="account__logout">Выйти</a>
+          </nav>
+          <div class="innner-page-content">
+            <div class="account__materials">
+              <h3 class="account__materials-title title-h3">Материалы</h3>
+              <ul class="account__materials-links-list">
+                <li class="account__materials-links-list-item">
+                  <a href="#" class="account__materials-link account__materials-link--active">За все время</a>
+                </li>
+                <li class="account__materials-links-list-item">
+                  <a href="#" class="account__materials-link link">2020</a>
+                </li>
+                <li class="account__materials-links-list-item">
+                  <a href="#" class="account__materials-link link">2019</a>
+                </li>
+                <li class="account__materials-links-list-item">
+                  <a href="#" class="account__materials-link link">2018</a>
+                </li>
+                <li class="account__materials-links-list-item">
+                  <a href="#" class="account__materials-link link">2017</a>
+                </li>
+              </ul>
+              <ul class="account__materials-cards-list">
+                <li class="account__materials-cards-list-item">
+                  <a href="#" class="account__materials-card card">
+                    <div class="card__img-wrapper">
+                      <img src="img/content/guitar-1.png" alt="Guitar" class="card__img" width="270" height="170">
+                    </div>
+                    <p class="card__suptitle">12.01.2021</p>
+                    <h3 class="card__title">Новый филиал в Санкт-Петербурге1</h3>
+                  </a>
+                </li>
+                <li class="account__materials-cards-list-item">
+                  <a href="#" class="account__materials-card card">
+                    <div class="card__img-wrapper">
+                      <img src="img/content/guitar-1.png" alt="Guitar" class="card__img" width="270" height="170">
+                    </div>
+                    <p class="card__suptitle">12.01.2021</p>
+                    <h3 class="card__title">Новый филиал в Санкт-Петербурге</h3>
+                  </a>
+                </li>
+                <li class="account__materials-cards-list-item">
+                  <a href="#" class="account__materials-card card">
+                    <div class="card__img-wrapper">
+                      <img src="img/content/guitar-1.png" alt="Guitar" class="card__img" width="270" height="170">
+                    </div>
+                    <p class="card__suptitle">12.01.2021</p>
+                    <h3 class="card__title">Новый филиал в Санкт-Петербурге</h3>
+                  </a>
+                </li>
+                <li class="account__materials-cards-list-item">
+                  <a href="#" class="account__materials-card card">
+                    <div class="card__img-wrapper">
+                      <img src="img/content/guitar-1.png" alt="Guitar" class="card__img" width="270" height="170">
+                    </div>
+                    <p class="card__suptitle">12.01.2021</p>
+                    <h3 class="card__title">Новый филиал в Санкт-Петербурге</h3>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>
