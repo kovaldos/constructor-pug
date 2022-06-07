@@ -1,0 +1,53 @@
+.link {
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+	padding: 5px;
+	color: $color-default-black;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	transition: all $trans-default;
+	&:focus {
+		outline: none;
+	}
+	&:hover,
+	&:focus-visible {
+		color: $color-jade;
+	}
+	&--colored {
+		color: $color-jade;
+		font-weight: 700;
+		&:focus {
+			outline: none;
+		}
+		&:hover,
+		&:focus-visible {
+			text-decoration: underline;
+		}
+	}
+	&--bolder {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 22px;
+		color: $color-dim-gray;
+		&::after {
+			content: "";
+			width: calc(100% - 2 * 5px);
+			max-width: 0;
+			height: 3px;
+			background-color: $color-jade;
+			position: absolute;
+			left: 5px;
+			bottom: 3px;
+			transition: all $trans-default;
+		}
+		&:focus-visible {
+			&::after {
+				max-width: 100%;
+			}
+		}
+	}
+}

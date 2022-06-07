@@ -1,0 +1,77 @@
+.socials {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 220px;
+	column-gap: 30px;
+	row-gap: 30px;
+	&__icon {
+		color: $color-night-rider;
+		transition: color $trans-default;
+	}
+	&__link {
+		width: 30px;
+		height: 30px;
+		flex: 0 0 30px;
+		border-radius: 10px;
+		padding: 0;
+		&:hover,
+		&:focus-visible {
+			.socials {
+				&__icon {
+					&--fb {
+						color: $color-mariner;
+					}
+					&--tg {
+						color: $color-pacific-blue;
+					}
+					&--tweet {
+						color: $color-malibu;
+					}
+					&--viber {
+						color: $color-vivid-violet;
+					}
+					&--vk {
+						color: $color-san-marino;
+					}
+					&--whatsapp {
+						color: $color-fruit-salad;
+					}
+					&--yt {
+						color: $color-cinnabar;
+					}
+				}
+			}
+		}
+		&--insta {
+			width: 30px;
+			height: 30px;
+			flex: 0 0 30px;
+			border-radius: 10px;
+			padding: 0;
+			background: $color-night-rider;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+			overflow: hidden;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background: $mustard-to-fuchsia;
+				opacity: 0;
+				transition: opacity $trans-default;
+				z-index: -1;
+			}
+			&:hover,
+			&:focus-visible {
+				background: $color-transparent;
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

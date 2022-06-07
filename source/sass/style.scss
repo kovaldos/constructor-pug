@@ -1,64 +1,54 @@
 // Vendor
-//---------------------------------
+// ---------------------------------
 
 @import "vendor/normalize";
-@import "vendor/swiper";
+// Swiper 7.4.1
+// @import "vendor/swiper";
 
 // Global
-//---------------------------------
+// ---------------------------------
 
 @import "variables";
 @import "mixins";
+@import "functions";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
-@import "global/common";
-@import "global/components";
-@import "global/custom-select";
-@import "global/data-accordion";
-@import "global/accordion";
+@import "global/container";
 
 // Blocks
-//---------------------------------
+// ---------------------------------
 
-// @import "blocks/header";
-@import "blocks/headers";
-// @import "blocks/footer";
-@import "blocks/footers";
 @import "blocks/modal";
-@import "blocks/modal-feedback";
-@import "blocks/modal-login";
-@import "blocks/modal-registration";
-@import "blocks/services";
-@import "blocks/catalog";
-@import "blocks/banners";
-@import "blocks/partners";
-@import "blocks/portfolio";
-@import "blocks/sales";
-@import "blocks/contacts-section";
-@import "blocks/benefits";
-@import "blocks/inner-page";
-@import "blocks/aside-menu";
-@import "blocks/account";
-@import "blocks/about";
-@import "blocks/history";
-@import "blocks/company-partners";
-@import "blocks/company-licenses";
-@import "blocks/company-workers";
-@import "blocks/company-vacancies";
-@import "blocks/company-reviews";
-@import "blocks/company-requisites";
-@import "blocks/contacts";
-@import "blocks/courses-main";
-@import "blocks/courses-category";
+@import "blocks/btn";
+@import "blocks/link";
+@import "blocks/custom-input";
+@import "blocks/custom-toggle";
+@import "blocks/custom-select";
+@import "blocks/socials";
+@import "blocks/header";
+@import "blocks/main-nav";
+@import "blocks/ui-kit";
+@import "blocks/footer";
 
-// Components
-//---------------------------------
 
-@import "components/button";
-@import "components/card";
-@import "components/counter";
-@import "components/input";
-@import "components/link";
-@import "components/social-link";
-@import "components/switch";
+// ---------------------------------
+
+// ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
+
+// ❗ обязательно используйте @media для отключения ховеров на тач устройствах
+// но не используем для текстовых полей ( input, textarea )
+/* @media (hover: hover), screen and (min-width: 0\0) {
+  &:hover,
+  &:focus {
+    color: $color-default-white;
+  }
+} */
+
+// адаптив пишем внутри каждого класса (смотрим container.scss)
+
+// для фикса проблем с vh на iOS в сборке подключен скрипт
+// используя vh на проекте задавайте их также как в примере в utils.scss
+
+// для любых transition обязательно указывайте transition-property
+// transition: $trans-default ❌ ---> transition: color $trans-default ✅

@@ -9,49 +9,27 @@
   const sass = require(`gulp-sass`); // дополнительный плагин
 ```
 
-Далее мы описываем задачи gulp - `const html = () => {};`
+Далее мы описываем задачи gulp - `const pugToHtml = () => {};`
 
 ```js
-  const html = () => {
-  return gulp.src(['source/html/*.html'])
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@root',
-      context: { // глобальные переменные для include
-        test: 'text'
-      }
-    }))
-    .pipe(htmlbeautify({
-      'indent_size': 2,
-      'preserve_newlines': true,
-      'max_preserve_newlines': 0,
-      'wrap_attributes': 'auto',
-    }))
-    .pipe(gulp.dest('build'));
-};
+  gulp.task(`css`, function () {
+    return gulp.src(`source/sass/style.scss`) // указываем с каким файлом мы работаем
+        .pipe(sass()) // преобразуем scss в css
+        .pipe(gulp.dest(`build/css`)) // указываем куда положить результат преобразования
+  });
 ```
 
 ## Краткое описание каждой таски.
 
-1. Преобразовает компоненты `@@include("source/html/base/head.html")` в готовый html.
+1. Преобразовает pug в html.
 
 ```js
- const html = () => {
-  return gulp.src(['source/html/*.html'])
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@root',
-      context: { // глобальные переменные для include
-        test: 'text'
-      }
-    }))
-    .pipe(htmlbeautify({
-      'indent_size': 2,
-      'preserve_newlines': true,
-      'max_preserve_newlines': 0,
-      'wrap_attributes': 'auto',
-    }))
-    .pipe(gulp.dest('build'));
+  const pugToHtml = () => {
+    return gulp.src('source/pug/pages/*.pug')
+        .pipe(plumber())
+        .pipe(pug({ pretty: true }))
+        .pipe(cached('pug'))
+        .pipe(gulp.dest('build'));
   };
 ```
 
@@ -107,18 +85,18 @@
 5. Создает спрайт.
 
 ```js
-  gulp.task(`sprite`, function () {
-    return gulp.src(`source/img/sprite/*.svg`)
+  const sprite = () => {
+    return gulp.src('source/img/sprite/*.svg')
         .pipe(svgstore({inlineSvg: true}))
-        .pipe(rename(`sprite_auto.svg`))
-        .pipe(gulp.dest(`build/img`));
-  });
+        .pipe(rename('sprite_auto.svg'))
+        .pipe(gulp.dest('build/img'));
+  };
 ```
 
 6. Запускает локальный сервер, который отслеживает изменения в html, css, js, изображениях и автоматически обновляет себя при изменениях в этих файлах.
 
 ```js
-  const syncServer = () => {
+  const syncserver = () => {
     server.init({
       server: 'build/',
       notify: false,
@@ -127,17 +105,12 @@
       ui: false,
     });
 
-    gulp.watch('source/html/**/*.html', gulp.series(html, refresh));
+    gulp.watch('source/html/*.html', gulp.series(copy, refresh));
     gulp.watch('source/sass/**/*.{scss,sass}', gulp.series(css));
     gulp.watch('source/js/**/*.{js,json}', gulp.series(js, refresh));
-    gulp.watch('source/data/**/*.{js,json}', gulp.series(copy, refresh));
-    gulp.watch('source/img/**/*.svg', gulp.series(copySvg, sprite, html, refresh));
-    gulp.watch('source/img/**/*.{png,jpg}', gulp.series(copyImages, html, refresh));
-
+    gulp.watch('source/img/**/*.svg', gulp.series(copysvg, sprite, refresh));
+    gulp.watch('source/img/**/*.{png,jpg,webp}', gulp.series(copypngjpg, refresh));
     gulp.watch('source/favicon/**', gulp.series(copy, refresh));
-    gulp.watch('source/video/**', gulp.series(copy, refresh));
-    gulp.watch('source/downloads/**', gulp.series(copy, refresh));
-    gulp.watch('source/*.php', gulp.series(copy, refresh));
   };
 
   const refresh = (done) => {
@@ -145,15 +118,16 @@
     done();
   };
 
-  const copySvg = () => {
+  const copysvg = () => {
     return gulp.src('source/img/**/*.svg', {base: 'source'})
         .pipe(gulp.dest('build'));
   };
 
-  const copyImages = () => {
-    return gulp.src('source/img/**/*.{png,jpg}', {base: 'source'})
+  const copypngjpg = () => {
+    return gulp.src('source/img/**/*.{png,jpg,webp}', {base: 'source'})
         .pipe(gulp.dest('build'));
   };
+      
 ```
 
 7. Копирует файлы из source в build.
@@ -161,13 +135,10 @@
 ```js
   const copy = () => {
     return gulp.src([
+      'source/html/**',
       'source/fonts/**',
       'source/img/**',
-      'source/data/**',
       'source/favicon/**',
-      'source/video/**',
-      'source/downloads/**',
-      'source/*.php',
     ], {
       base: 'source',
     })
@@ -188,9 +159,9 @@
 ❗ Порядок важен.
 
 ```js
-  const build = gulp.series(clean, svgo, copy, css, sprite, js, html);
+  const build = gulp.series(clean, svgo, copy, css, sprite, js, pugToHtml);
 
-  const start = gulp.series(build, syncServer);
+  const start = gulp.series(build, syncserver);
 ```
 
 ---
@@ -202,7 +173,7 @@
 
 ```js
   const createWebp = () => {
-    const root = ``;
+    const root = '';
     return gulp.src(`source/img/${root}**/*.{png,jpg}`)
       .pipe(webp({quality: 90}))
       .pipe(gulp.dest(`source/img/${root}`));

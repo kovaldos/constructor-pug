@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>UI-kit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="ProjectName — описание">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+<clipPath id="clip0_601_4634">
+<rect width="30" height="30" fill="white"/>
+</clipPath>
+</defs><symbol id="icon-chevron-right" viewBox="0 0 11 20">
+<path d="M0.750461 1.49993C0.749815 1.83094 0.865096 2.15172 1.07629 2.40659L7.42296 9.99993L1.30296 17.6074C1.18528 17.7523 1.09741 17.9191 1.04438 18.0981C0.991349 18.277 0.974217 18.4647 0.993963 18.6504C1.01371 18.836 1.06995 19.0159 1.15944 19.1797C1.24894 19.3435 1.36993 19.488 1.51546 19.6049C1.66037 19.7226 1.8271 19.8105 2.00608 19.8635C2.18507 19.9165 2.37276 19.9337 2.55838 19.9139C2.74401 19.8942 2.9239 19.8379 3.08772 19.7484C3.25154 19.6589 3.39605 19.538 3.51296 19.3924L10.3555 10.8924C10.5638 10.6389 10.6777 10.321 10.6777 9.99285C10.6777 9.66471 10.5638 9.34675 10.3555 9.09326L3.27213 0.593263C3.1532 0.449814 3.00714 0.331236 2.84232 0.24432C2.67749 0.157404 2.49714 0.103859 2.31159 0.0867497C2.12604 0.0696426 1.93893 0.0893112 1.761 0.144624C1.58306 0.199936 1.41778 0.289808 1.27463 0.409095C1.11212 0.540922 0.980828 0.707113 0.890198 0.895723C0.799567 1.08433 0.751845 1.29068 0.750461 1.49993Z" fill="currentColor"/>
+</symbol><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-fb" viewBox="0 0 16 30">
+<path d="M12.9969 4.98125H15.7356V0.21125C15.2631 0.14625 13.6381 0 11.7456 0C3.08062 0 5.43813 9.8125 5.09312 11.25H0.734375V16.5825H5.09188V30H10.4344V16.5837H14.6156L15.2794 11.2513H10.4331C10.6681 7.72125 9.48187 4.98125 12.9969 4.98125Z" fill="currentColor"/>
+</symbol><symbol id="icon-insta" viewBox="0 0 24 24">
+<path d="M11.9973 0.922799C7.45852 0.922799 3.14852 0.51905 1.50227 4.74405C0.822268 6.48905 0.921018 8.7553 0.921018 12.0003C0.921018 14.8478 0.829768 17.524 1.50227 19.2553C3.14477 23.4828 7.48977 23.0778 11.9948 23.0778C16.341 23.0778 20.8223 23.5303 22.4885 19.2553C23.1698 17.4928 23.0698 15.2603 23.0698 12.0003C23.0698 7.6728 23.3085 4.87905 21.2098 2.78155C19.0848 0.656549 16.211 0.922799 11.9923 0.922799H11.9973ZM11.0048 2.91905C20.4723 2.90405 21.6773 1.85155 21.0123 16.4728C20.776 21.6441 16.8385 21.0765 11.9985 21.0765C3.17352 21.0765 2.91977 20.8241 2.91977 11.9953C2.91977 3.06405 3.61977 2.92405 11.0048 2.91655V2.91905ZM17.9098 4.7578C17.176 4.7578 16.581 5.3528 16.581 6.08655C16.581 6.8203 17.176 7.4153 17.9098 7.4153C18.6435 7.4153 19.2385 6.8203 19.2385 6.08655C19.2385 5.3528 18.6435 4.7578 17.9098 4.7578ZM11.9973 6.31155C8.85602 6.31155 6.30977 8.85905 6.30977 12.0003C6.30977 15.1416 8.85602 17.6878 11.9973 17.6878C15.1385 17.6878 17.6835 15.1416 17.6835 12.0003C17.6835 8.85905 15.1385 6.31155 11.9973 6.31155ZM11.9973 8.3078C16.8785 8.3078 16.8848 15.6928 11.9973 15.6928C7.11727 15.6928 7.10977 8.3078 11.9973 8.3078Z" fill="currentColor"/>
+</symbol><symbol id="icon-tg" viewBox="0 0 30 26">
+<path d="M11.7715 16.9768L11.2752 23.9568C11.9852 23.9568 12.2927 23.6518 12.6615 23.2855L15.9902 20.1043L22.8877 25.1555C24.1527 25.8605 25.044 25.4893 25.3852 23.9918L29.9127 2.77676L29.914 2.77551C30.3152 0.905507 29.2377 0.174257 28.0052 0.633007L1.39272 10.8218C-0.423528 11.5268 -0.396028 12.5393 1.08397 12.998L7.88772 15.1143L23.6915 5.22551C24.4352 4.73301 25.1115 5.00551 24.5552 5.49801L11.7715 16.9768Z" fill="currentColor"/>
+</symbol><symbol id="icon-tweet" viewBox="0 0 30 26">
+<path d="M26.94 7.68625C26.94 7.415 26.93 7.15125 26.9175 6.89125C28.1375 6.025 29.1637 4.94375 30 3.69875V3.6975C28.8838 4.18625 27.6963 4.51125 26.4563 4.66875C27.7313 3.9075 28.705 2.71125 29.1625 1.27C27.9737 1.97875 26.6612 2.47875 25.2625 2.75875C24.1337 1.55625 22.525 0.8125 20.77 0.8125C17.365 0.8125 14.6238 3.57625 14.6238 6.96375C14.6238 7.45125 14.665 7.92 14.7662 8.36625C9.65375 8.11625 5.12875 5.66625 2.08875 1.9325C1.55875 2.85375 1.24625 3.9075 1.24625 5.04125C1.24625 7.17125 2.3425 9.05875 3.97875 10.1525C2.99 10.1337 2.02125 9.84625 1.2 9.395V9.4625C1.2 12.4513 3.33125 14.9338 6.1275 15.5063C5.1875 15.7638 4.03 15.7537 3.35125 15.6038C4.1475 18.0387 6.41 19.83 9.0975 19.8888C7.005 21.525 4.3475 22.5112 1.47125 22.5112C0.9675 22.5112 0.48375 22.4888 0 22.4275C2.725 24.1838 5.9525 25.1875 9.435 25.1875C20.7525 25.1875 26.94 15.8125 26.94 7.68625Z" fill="currentColor"/>
+</symbol><symbol id="icon-viber" viewBox="0 0 29 30">
+<path d="M27.9436 17.3671C28.8386 9.83338 27.5136 5.07714 25.1236 2.92589L25.1249 2.92464C21.2674 -0.749115 8.23986 -1.29287 3.62486 3.08964C1.55236 5.23339 0.822355 8.37964 0.742355 12.2746C0.662355 16.1709 0.567355 23.4696 7.36861 25.4496H7.37486L7.36861 28.4734C7.36861 28.4734 7.32236 29.6984 8.10486 29.9446C8.99986 30.2346 9.40486 29.6659 12.1886 26.3409C16.8436 26.7446 20.4186 25.8196 20.8249 25.6846C21.7649 25.3696 27.0836 24.6659 27.9436 17.3671ZM12.6474 24.2134C12.6474 24.2134 9.70111 27.8871 8.78486 28.8409C8.48486 29.1509 8.15611 29.1221 8.16111 28.5071C8.16111 28.1034 8.18361 23.4871 8.18361 23.4871C2.41736 21.8346 2.75736 15.6196 2.81986 12.3684C2.88236 9.11589 3.47736 6.45214 5.23236 4.65839C9.28111 0.862135 20.7024 1.71089 23.6124 4.44589C27.1699 7.59964 25.9036 16.5096 25.9111 16.8134C25.1799 22.9059 20.8699 23.2921 20.0774 23.5559C19.7386 23.6684 16.5949 24.4771 12.6474 24.2134Z" fill="currentColor"/>
+<path d="M14.277 5.37214C13.7957 5.37214 13.7957 6.12214 14.277 6.12839C18.0107 6.15714 21.0857 8.75964 21.1195 13.5334C21.1195 14.0371 21.857 14.0309 21.8507 13.5271H21.8495C21.8095 8.38339 18.452 5.40089 14.277 5.37214Z" fill="currentColor"/>
+<path d="M19.1884 12.7421C19.1771 13.2396 19.9134 13.2634 19.9196 12.7596C19.9809 9.92339 18.2321 7.58714 14.9459 7.34089C14.4646 7.30589 14.4146 8.06214 14.8946 8.09714C17.7446 8.31339 19.2459 10.2584 19.1884 12.7421Z" fill="currentColor"/>
+<path d="M18.4015 15.9684C17.784 15.6109 17.1552 15.8334 16.8952 16.1846L16.3515 16.8884C16.0752 17.2459 15.559 17.1984 15.559 17.1984C11.7915 16.2021 10.784 12.2596 10.784 12.2596C10.784 12.2596 10.7377 11.7259 11.0827 11.4396L11.7627 10.8771C12.1027 10.6071 12.3177 9.95711 11.9715 9.31836C11.0465 7.64711 10.4252 7.07086 10.109 6.62836C9.77647 6.21211 9.27647 6.11836 8.75647 6.39961H8.74522C7.66397 7.03211 6.48022 8.21586 6.85897 9.43461C7.50522 10.7196 8.69272 14.8159 12.4777 17.9109C14.2565 19.3746 17.0715 20.8746 18.2665 21.2209L18.2777 21.2384C19.4552 21.6309 20.6002 20.4009 21.2115 19.2871V19.2784C21.4827 18.7396 21.3927 18.2296 20.9965 17.8959C20.294 17.2109 19.234 16.4546 18.4015 15.9684Z" fill="currentColor"/>
+<path d="M15.4608 10.1309C16.662 10.2009 17.2446 10.8284 17.3071 12.1171C17.3296 12.6209 18.0608 12.5859 18.0383 12.0821C17.9583 10.3996 17.0808 9.46212 15.5008 9.37462C15.0195 9.34587 14.9745 10.1021 15.4608 10.1309Z" fill="currentColor"/>
+</symbol><symbol id="icon-vk" viewBox="0 0 30 18">
+<path d="M24.8938 10.285C24.4088 9.6725 24.5475 9.4 24.8938 8.8525C24.9 8.84625 28.9037 3.31375 29.3162 1.4375L29.3188 1.43625C29.5238 0.7525 29.3188 0.25 28.3275 0.25H25.0475C24.2125 0.25 23.8275 0.68125 23.6213 1.16375C23.6213 1.16375 21.9513 5.16125 19.5887 7.7525C18.8263 8.50125 18.4738 8.74125 18.0575 8.74125C17.8525 8.74125 17.5338 8.50125 17.5338 7.8175V1.43625C17.5338 0.61625 17.3 0.25 16.6087 0.25H11.4513C10.9275 0.25 10.6163 0.6325 10.6163 0.98875C10.6163 1.76625 11.7975 1.945 11.92 4.1325V8.87875C11.92 9.91875 11.7312 10.11 11.3125 10.11C10.1975 10.11 7.49125 6.09625 5.8875 1.5025C5.56375 0.61125 5.2475 0.25125 4.40625 0.25125H1.125C0.18875 0.25125 0 0.6825 0 1.165C0 2.0175 1.115 6.25625 5.185 11.8563C7.8975 15.6788 11.7175 17.75 15.1925 17.75C17.2812 17.75 17.5363 17.29 17.5363 16.4988C17.5363 12.8463 17.3475 12.5013 18.3937 12.5013C18.8787 12.5013 19.7137 12.7413 21.6637 14.585C23.8925 16.7713 24.2588 17.75 25.5063 17.75H28.7862C29.7212 17.75 30.195 17.29 29.9225 16.3825C29.2987 14.4738 25.0838 10.5475 24.8938 10.285Z" fill="currentColor"/>
+</symbol><symbol id="icon-whatsapp" viewBox="0 0 30 30">
+<g clip-path="url(#clip0_601_4634)">
+<path class="st0" d="M25.65 4.31125C22.8 1.55625 19.05 0 15.0562 0C3.59375 0 -3.60375 12.4187 2.12 22.2975L0 30L7.91875 27.935C11.3687 29.7987 14.195 29.6338 15.0637 29.7437C28.355 29.7437 34.9712 13.6637 25.6312 4.36L25.65 4.31125Z" fill="#ECEFF1"/>
+<path class="st1" d="M15.0834 27.1888L15.0759 27.1875H15.0559C11.0784 27.1875 8.53711 25.3038 8.28711 25.195L3.59961 26.4138L4.85586 21.8575L4.55711 21.3888C3.31961 19.4188 2.66211 17.15 2.66211 14.8138C2.66211 3.82252 16.0934 -1.67373 23.8659 6.09502C31.6196 13.7825 26.1759 27.1888 15.0834 27.1888Z" fill="currentColor"/>
+<path d="M21.8839 17.8847L21.8727 17.9784C21.4964 17.7909 19.6639 16.8947 19.3227 16.7709C18.5564 16.4872 18.7727 16.7259 17.3014 18.4109C17.0827 18.6547 16.8652 18.6734 16.4939 18.5047C16.1189 18.3172 14.9152 17.9234 13.4902 16.6484C12.3802 15.6547 11.6352 14.4359 11.4152 14.0609C11.0489 13.4284 11.8152 13.3384 12.5127 12.0184C12.6377 11.7559 12.5739 11.5497 12.4814 11.3634C12.3877 11.1759 11.6414 9.33844 11.3289 8.60594C11.0289 7.87594 10.7202 7.96844 10.4889 7.96844C9.76892 7.90594 9.24267 7.91594 8.77892 8.39844C6.76142 10.6159 7.27017 12.9034 8.99642 15.3359C12.3889 19.7759 14.1964 20.5934 17.5014 21.7284C18.3939 22.0122 19.2077 21.9722 19.8514 21.8797C20.5689 21.7659 22.0602 20.9784 22.3714 20.0972C22.6902 19.2159 22.6902 18.4847 22.5964 18.3159C22.5039 18.1472 22.2589 18.0534 21.8839 17.8847Z" fill="white"/>
+</g>
+
+</symbol><symbol id="icon-yt" viewBox="0 0 30 22">
+<path d="M0.652288 18.3429C1.26479 20.5154 3.13854 20.9129 3.26354 20.9891C6.34729 21.8291 23.6323 21.8316 26.7623 20.9891C28.906 20.3691 29.2998 18.4679 29.3735 18.3429C30.1898 14.0004 30.2435 8.33912 29.336 3.41162L29.3735 3.65662C28.761 1.48412 26.8873 1.08662 26.7623 1.01037C23.7198 0.184117 6.38979 0.152867 3.26354 1.01037C1.11979 1.63162 0.726038 3.53162 0.652288 3.65662C-0.221462 8.22037 -0.265212 13.4566 0.652288 18.3429V18.3429ZM12.0098 15.5641V6.44787L19.8423 11.0129L12.0098 15.5641Z" fill="currentColor"/>
+</symbol></svg>
+    </div>
+    <div class="wrapper">
+      <style>
+        main {
+          margin-top: 100px;
+        }
+        
+        main > .container {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+        
+        .components-backwards {
+          color: #ffffff;
+          display: inline-block;
+        }
+        
+        .components-backwards span:first-child {
+          position: relative;
+          top: -3px;
+        
+          display: inline-block;
+          margin-right: 15px;
+        
+          font-size: 16px;
+          line-height: 24px;
+          vertical-align: top;
+        
+          transform: scale(2);
+        }
+        
+        .components-backwards span:last-child {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        
+        .components-backwards + h1 {
+          margin-bottom: 0;
+        }
+        
+        .container > section {
+          padding: 70px 0 0 0;
+        }
+        
+        section > h2 {
+          margin: 0 0 20px 0;
+          padding: 20px 0;
+          position: relative;
+          color: #ffffff;
+        }
+        
+        section > h2::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100vw;
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%);
+          background-color: #2c39f2;
+          z-index: -1;
+        }
+        
+        .header-ui {
+          background-color: #2c39f2;
+          padding: 20px 0;
+          position: fixed;
+          width: 100vw;
+          z-index: 99;
+          box-shadow: 0 0 3px 1px #000000;
+        }
+        
+        .header-ui__nav {
+          display: grid;
+          grid-template-columns: max-content 1fr;
+          gap: 20px 80px;
+        }
+        
+        .header-ui__inner-list {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px 30px;
+        }
+        
+        .header-ui__inner-link {
+          color: #ffffff;
+          transition: color 0.3s ease;
+        }
+        
+        .header-ui__inner-link:hover,
+        .header-ui__inner-link.is-active {
+          color: #ff1553;
+        }
+        
+        .header-ui__inner-link.is-inactive {
+          color: #ffffff;
+          pointer-events: none;
+        }
+        
+      </style>
+      <header class="header-ui">
+        <nav class="header-ui__nav container"><a class="components-backwards" href="sitemap.html"><span>&larr;</span><span>вернуться на разводящую</span></a>
+          <ul class="header-ui__inner-list">
+            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#modals" data-navigation-link>Modals</a></li>
+            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#buttons" data-navigation-link>Buttons</a></li>
+            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#form-elements" data-navigation-link>Form elements</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="container">
+          <h1>UI-kit</h1>
+          <section id="modals">
+            <h2>Modals</h2>
+            <p>
+              <button class="btn" type="button" data-open-modal="feedback">modal-feedback</button>
+            </p>
+            <p>
+              <button class="btn" type="button" data-open-modal="success">modal-success</button>
+            </p>
+          </section>
+          <section id="buttons">
+            <h2>Buttons</h2>
+            <a class="btn" href="#">Текст</a>
+            <p>Пример вызова</p><code>
+              <pre>+btn({text: "Текст", href: "#"})</pre></code>
+            <a class="btn btn--red" href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="Просто ссылка">Текст</a>
+            <p>Пример вызова</p><code>
+              <pre>+btn({text: "Я красная ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red</pre></code>
+            <button class="btn" type="button" disabled>Текст</button>
+            <p>Пример вызова</p><code>
+              <pre>+btn({text: "Текст"})(disabled)</pre></code>
+          </section>
+          <section id="form-elements">
+            <h2>Form elements</h2>
+            <div data-validate>
+              <form method="post">
+                <div class="custom-input" data-validate-type="text" data-limitations="name">
+                  <label><span class="custom-input__label">Введите ваше имя</span>
+                    <input type="text" name="user-name" minlength="2">
+                  </label>
+                  <div class="custom-input__error">Не корректное имя</div>
+                </div>
+                <p>Пример вызова</p><code>
+                  <pre>+custom-input({inputLabel: "Введите ваше имя", inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")</pre></code>
+                <div class="custom-input" data-validate-type="phone">
+                  <label><span class="custom-input__label">Введите ваш телефон</span>
+                    <input type="tel" name="user-phone">
+                  </label>
+                  <div class="custom-input__error">Не корректный телефон</div>
+                </div>
+                <p>Пример вызова</p><code>
+                  <pre>+custom-input({inputLabel: "Введите ваш телефон", inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")</pre></code>
+                <div class="custom-input" data-validate-type="email">
+                  <label><span class="custom-input__label">Введите ваш email</span>
+                    <input type="email" name="user-email">
+                  </label>
+                  <div class="custom-input__error">Не корректный email</div>
+                </div>
+                <p>Пример вызова</p><code>
+                  <pre>+custom-input({inputLabel: "Введите ваш email", inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email")</pre></code>
+                <div class="custom-textarea">
+                  <label><span class="custom-textarea__label">Расскажите о себе</span>
+                    <textarea name="user-info"></textarea>
+                  </label>
+                </div>
+                <p>Пример вызова</p><code>
+                  <pre>+custom-textarea({inputLabel: "Расскажите о себе", inputName: "user-info"})</pre></code>
+                <div class="custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example"><span class="custom-select__error">Выберите тему обращения</span>
+                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
+                  <ul class="custom-select__list" role="listbox">
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="true" role="option">Тема 1</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Тема 2</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Тема 3</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Тема 4</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Тема 5</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">Тема 6</li>
+                  </ul>
+                </div><code>
+                  <pre></pre>+custom-select({error: "Выберите тему обращения", optionsList: [{text: "Тема 1", value: "id-1"}, {text:
+                  "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5",
+                  value: "id-5"}, {text: "Тема 6", value: "id-6"}]})(data-select, data-validate-type="select", data-name="some-name",
+                  data-id="id-example").custom-select</code>
+                <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
+                  <label>
+                    <input type="checkbox" name="user-agreement" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Подтвердите своё согласие</span>
+                  </label>
+                  <div class="custom-toggle__error">Согласие является обязательным</div>
+                </div>
+                <p>Пример вызова</p><code>
+                  <pre>+custom-toggle({inputLabel: "Подтвердите своё согласие", inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox</pre></code>
+                <button class="btn" type="reset">Сбросить форму</button>
+                <button class="btn" type="submit">Отправить форму</button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </main>
+      <script>const MoveTo = (() => {
+  /**
+  * Defaults
+  * @type {object}
+  */
+  const defaults = {
+    tolerance: 0,
+    duration: 800,
+    easing: 'easeOutQuart',
+    container: window,
+    callback() {},
+  };
+
+  /**
+  * easeOutQuart Easing Function
+  * @param  {number} t - current time
+  * @param  {number} b - start value
+  * @param  {number} c - change in value
+  * @param  {number} d - duration
+  * @return {number} - calculated value
+  */
+  function easeOutQuart(t, b, c, d) {
+    t /= d;
+    t--;
+    return -c * (t * t * t * t - 1) + b;
+  }
+
+  /**
+  * Merge two object
+  *
+  * @param  {object} obj1
+  * @param  {object} obj2
+  * @return {object} merged object
+  */
+  function mergeObject(obj1, obj2) {
+    const obj3 = {};
+    Object.keys(obj1).forEach((propertyName) => {
+      obj3[propertyName] = obj1[propertyName];
+    });
+
+    Object.keys(obj2).forEach((propertyName) => {
+      obj3[propertyName] = obj2[propertyName];
+    });
+    return obj3;
+  }
+
+  /**
+  * Converts camel case to kebab case
+  * @param  {string} val the value to be converted
+  * @return {string} the converted value
+  */
+  function kebabCase(val) {
+    return val.replace(/([A-Z])/g, function ($1) {
+      return '-' + $1.toLowerCase();
+    });
+  }
+
+  /**
+  * Count a number of item scrolled top
+  * @param  {Window|HTMLElement} container
+  * @return {number}
+  */
+  function countScrollTop(container) {
+    if (container instanceof HTMLElement) {
+      return container.scrollTop;
+    }
+    return container.pageYOffset;
+  }
+
+  /**
+  * MoveTo Constructor
+  * @param {object} options Options
+  * @param {object} easeFunctions Custom ease functions
+  */
+  // eslint-disable-next-line no-shadow
+  function MoveTo(options = {}, easeFunctions = {}) {
+    this.options = mergeObject(defaults, options);
+    this.easeFunctions = mergeObject({easeOutQuart}, easeFunctions);
+  }
+
+  /**
+  * Register a dom element as trigger
+  * @param  {HTMLElement} dom Dom trigger element
+  * @param  {function} callback Callback function
+  * @return {function|void} unregister function
+  */
+  MoveTo.prototype.registerTrigger = function (dom, callback) {
+    if (!dom) {
+      return;
+    }
+
+    const href = dom.getAttribute('href') || dom.getAttribute('data-target');
+    // The element to be scrolled
+    const target = (href && href !== '#')
+      ? document.getElementById(href.substring(1))
+      : document.body;
+    const options = mergeObject(this.options, _getOptionsFromTriggerDom(dom, this.options));
+
+    if (typeof callback === 'function') {
+      options.callback = callback;
+    }
+
+    const listener = (e) => {
+      e.preventDefault();
+      this.move(target, options);
+    };
+
+    dom.addEventListener('click', listener, false);
+
+    // eslint-disable-next-line consistent-return
+    return () => dom.removeEventListener('click', listener, false);
+  };
+
+  /**
+  * Move
+  * Scrolls to given element by using easeOutQuart function
+  * @param  {HTMLElement|number} target Target element to be scrolled or target position
+  * @param  {object} options Custom options
+  */
+  MoveTo.prototype.move = function (target, options = {}) {
+    if (target !== 0 && !target) {
+      return;
+    }
+
+    options = mergeObject(this.options, options);
+
+    let distance = typeof target === 'number' ? target : target.getBoundingClientRect().top;
+    const from = countScrollTop(options.container);
+    let startTime = null;
+    let lastYOffset;
+    distance -= options.tolerance;
+
+    // rAF loop
+    /* eslint-disable-next-line */
+    const loop = (currentTime) => {
+      const currentYOffset = countScrollTop(this.options.container);
+
+      if (!startTime) {
+        // To starts time from 1, we subtracted 1 from current time
+        // If time starts from 1 The first loop will not do anything,
+        // because easing value will be zero
+        startTime = currentTime - 1;
+      }
+
+      const timeElapsed = currentTime - startTime;
+
+      if (lastYOffset) {
+        if (
+          (distance > 0 && lastYOffset > currentYOffset) ||
+          (distance < 0 && lastYOffset < currentYOffset)
+        ) {
+          return options.callback(target);
+        }
+      }
+      lastYOffset = currentYOffset;
+
+      const val = this.easeFunctions[options.easing](timeElapsed, from, distance, options.duration);
+
+      options.container.scroll(0, val);
+
+      if (timeElapsed < options.duration) {
+        window.requestAnimationFrame(loop);
+      } else {
+        options.container.scroll(0, distance + from);
+        options.callback(target);
+      }
+    };
+
+    window.requestAnimationFrame(loop);
+  };
+
+  /**
+  * Adds custom ease function
+  * @param {string}   name Ease function name
+  * @param {function} fn   Ease function
+  */
+  MoveTo.prototype.addEaseFunction = function (name, fn) {
+    this.easeFunctions[name] = fn;
+  };
+
+  /**
+  * Returns options which created from trigger dom element
+  * @param  {HTMLElement} dom Trigger dom element
+  * @param  {object} options The instance's options
+  * @return {object} The options which created from trigger dom element
+  */
+  function _getOptionsFromTriggerDom(dom, options) {
+    const domOptions = {};
+
+    Object.keys(options).forEach((key) => {
+      const value = dom.getAttribute(`data-mt-${kebabCase(key)}`);
+      if (value) {
+        domOptions[key] = isNaN(value) ? value : parseInt(value, 10);
+      }
+    });
+    return domOptions;
+  }
+
+  return MoveTo;
+})();
+window.MoveTo = MoveTo;
+
+class NavigationChanger {
+  constructor() {
+    this._scrollDuration = 1000;
+    this._currentIndex = 0;
+    this._newCurrentIndex = null;
+    this._blockShift = 50;
+    this._linkElements = document.querySelectorAll('[data-navigation-link]');
+
+    this._moveTo = new window.MoveTo({
+      duration: this._scrollDuration,
+      easing: 'easeOutQuart',
+    });
+
+    this._documentScrollHandler = this._documentScrollHandler.bind(this);
+  }
+
+  init() {
+    if (!this._linkElements.length) {
+      return;
+    }
+    this._initMoveTo();
+    this._changeLinksActiveState();
+    document.addEventListener('scroll', this._documentScrollHandler);
+  }
+
+  _documentScrollHandler() {
+    this._changeLinksActiveState();
+  }
+
+  _changeLinksActiveState() {
+    this._linkElements.forEach((link, index) => {
+      const currentBlockElement = document.querySelector(`${link.getAttribute('href')}`);
+      if (!currentBlockElement) {
+        // eslint-disable-next-line no-console
+        console.error('Блока на который ссылается ссылка не существует! Проверьте соответствие href ссылок с id блоков');
+        return;
+      }
+      if (currentBlockElement.getBoundingClientRect().bottom > this._blockShift && currentBlockElement.getBoundingClientRect().top <= this._blockShift) {
+        link.classList.add('is-active');
+      } else {
+        link.classList.remove('is-active');
+      }
+
+      if (document.body.getBoundingClientRect().bottom - window.innerHeight < this._blockShift && currentBlockElement.getBoundingClientRect().top > this._blockShift) {
+        this._linkElements[index - 1].classList.remove('is-active');
+        link.classList.add('is-active');
+      }
+    });
+  }
+
+  _removeLinkAnimation() {
+    this._linkElements.forEach((link, index) => {
+      if (index !== this._currentIndex && index !== this._newCurrentIndex) {
+        link.classList.add('is-inactive');
+      }
+    });
+  }
+
+  _addLinkAnimation() {
+    this._linkElements.forEach((link) => link.classList.remove('is-inactive'));
+    this._currentIndex = this._newCurrentIndex;
+  }
+
+  _initMoveTo() {
+    this._linkElements.forEach((link, index) => {
+      link.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        const target = document.querySelector(`${link.getAttribute('href')}`);
+        if (!target) {
+          // eslint-disable-next-line no-console
+          console.error('Блока на который ссылается ссылка не существует! Проверьте соответствие href ссылок с id блоков');
+          return;
+        }
+        this._newCurrentIndex = index;
+        this._moveTo.move(target);
+        this._removeLinkAnimation();
+        setTimeout(() => {
+          this._addLinkAnimation();
+        }, this._scrollDuration);
+      });
+    });
+  }
+}
+
+const navigationChanger = new NavigationChanger();
+
+navigationChanger.init();
+
+      </script>
+    </div>
+    <div class="modal modal--preload modal--feedback" data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Обычная модалка</p>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br>отключена анимация-скейл</p>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+.btn {
+  width: 100%;
+  max-width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 40px 11px;
+  background-color: rgba($color-default-black, 0.3);
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: all $trans-default;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: $color-default-white;
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  &--fill {
+    background-color: $color-jade;
+  }
+  &--stroke {
+    background-color: $color-default-white;
+    color: $color-jade;
+    border: 2px solid $color-jade;
+    padding: 8px 38px 9px;
+  }
+  &--nav {
+    max-width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 6px rgba($color-default-black, 0.16);
+    padding: 8px;
+    background-color: $color-default-white;
+    svg {
+      color: $color-default-black;
+      transition: all $trans-default;
+    }
+  }
+  &--reset {
+    color: $color-default-black;
+    background-color: $color-transparent;
+    outline: none;
+  }
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &--fill {
+      &:hover,
+      &:focus-visible {
+        box-shadow: 0px 0px 16px rgba($color-default-black, 0.3);
+      }
+    }
+    &--stroke {
+      &:hover,
+      &:focus-visible {
+        color: $color-default-white;
+        background-color: $color-jade;
+      }
+    }
+    &--nav {
+      &:hover,
+      &:focus-visible {
+        background-color: $color-jade;
+        svg {
+          color: $color-default-white;
+        }
+      }
+    }
+  }
+}
