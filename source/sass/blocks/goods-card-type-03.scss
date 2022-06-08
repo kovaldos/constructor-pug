@@ -1,7 +1,7 @@
 .ui-kit {
 	&__card {
 		&--type-03 {
-			.goods-card {
+			.goods-card { // для реального проекта копируем class goods-card и всё, что внутри.
 				max-width: 270px;
 				padding: 15px 0;
 

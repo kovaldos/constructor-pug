@@ -1,14 +1,18 @@
 .ui-kit {
 	&__card {
-		&--type-01 { // для реального проекта копируем class goods-card и всё, что внутри.
+		&--type-04 {
 			.goods-card {
+				// для реального проекта копируем class goods-card и всё, что внутри.
+				position: relative;
+				max-width: 270px;
+				padding: 15px 0;
 				&:focus-visible {
 					outline: none;
 				}
 				&:hover,
 				&:focus-visible {
 					.goods-card {
-						&__wrapper {
+						&__pic {
 							box-shadow: 0px 0px 25px rgba($color-default-black, 0.2);
 						}
 						&__info {
@@ -18,30 +22,57 @@
 						}
 					}
 				}
-				&__wrapper {
-					display: block;
-					background-color: $color-default-white;
-					box-shadow: 0px 0px 10px rgba($color-default-black, 0.15);
-					border-radius: 5px;
-					transition: all $trans-default;
-					&:focus-visible {
-						outline: none;
-					}
-				}
 				&__pic {
-					border-top-left-radius: inherit;
-					border-top-right-radius: inherit;
+					border-radius: 5px;
 					overflow: hidden;
+					box-shadow: 0px 0px 10px rgba($color-default-black, 0.15);
+					transition: all $trans-default;
 				}
 				&__info {
-					min-height: 80px;
-					padding: 15px 20px;
-					transition: color $trans-default;
+					margin: 15px 0 0;
+					display: flex;
+					flex-direction: column;
+					&-row {
+						display: flex;
+					}
+					&-article {
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 15px;
+						color: $color-dark-gray;
+						white-space: nowrap;
+					}
+					&-availability {
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 15px;
+						color: $color-jade;
+						padding: 0 0 0 30px;
+					}
+					&-text {
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 15px;
+						color: $color-dark-gray;
+					}
+					&-title {
+						margin: 10px 0 15px;
+					}
+				}
+				&__price {
+					font-weight: 700;
+					font-size: 18px;
+					line-height: 22px;
+					color: $color-default-black;
+				}
+				&__action {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					margin: 20px 0 0;
 				}
 				&__counter {
 					display: flex;
-					margin: 50px 0 0;
-					padding: 30px 0;
 				}
 				&__btn {
 					padding: 10px;
@@ -81,6 +112,9 @@
 							}
 						}
 					}
+				}
+				&__btn-buy {
+					padding: 10px 26px 11px;
 				}
 			}
 		}

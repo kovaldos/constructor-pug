@@ -176,6 +176,18 @@ main {
 						}
 					}
 				}
+				&--type-04 {
+					.goods-card {
+						&__pic {
+							box-shadow: 0px 0px 25px rgba($color-default-black, 0.2);
+						}
+						&__info {
+							&-title {
+								color: $color-jade;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
