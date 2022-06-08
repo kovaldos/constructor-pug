@@ -1,0 +1,51 @@
+.ui-kit {
+	&__card {
+		&--type-02 {
+			.goods-card {
+				padding: 15px 0;
+				&:focus-visible {
+					outline: none;
+				}
+				&:hover,
+				&:focus-visible {
+					.goods-card {
+						&__info {
+							&-title {
+								color: $color-jade;
+							}
+						}
+					}
+				}
+				&__wrapper {
+					display: grid;
+					grid-template-columns: 70px 1fr;
+					grid-column-gap: 30px;
+					&:focus-visible {
+						outline: none;
+					}
+				}
+				&__info {
+					display: flex;
+					flex-direction: column;
+
+					&-date {
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 15px;
+						color: $color-dark-gray;
+					}
+					&-title {
+						margin: 5px 0 10px;
+						transition: color $trans-default;
+					}
+					&-text {
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 17px;
+						color: $color-matterhorn;
+					}
+				}
+			}
+		}
+	}
+}

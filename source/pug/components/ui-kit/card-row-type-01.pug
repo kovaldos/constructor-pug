@@ -1,6 +1,8 @@
-mixin card-row()
+mixin card-row-type-01()
 	-
 		const data = {
+			elem: "Card",
+			title: "Акустические гитары",
 			btnMinus: {
 				text: "-",
 			},
@@ -15,17 +17,17 @@ mixin card-row()
 			},
 		}
 
-	.ui-kit__row.card-row
+	.ui-kit__row.card-row.card-row--type-01
 		.ui-kit__col.element
-			span Card
+			span=data.elem
 		.ui-kit__col.state.state--default
 			.ui-kit__card.ui-kit__card--type-01
-				.goods-card
+				.goods-card(tabindex="0")
 					a.goods-card__wrapper(href="#") 
 						.goods-card__pic 
 							+picture("content/card-type-01", "card-img", "jpg", "100%", "100%", "Акустическая гитара").goods-card__img
 						.goods-card__info
-							span.goods-card__info-text Акустические гитары
+							span.goods-card__info-text=data.title
 					.goods-card__counter
 						+btn(data.btnMinus).goods-card__btn.goods-card__btn--minus
 						+custom-input(data.input).goods-card__input
@@ -37,7 +39,7 @@ mixin card-row()
 						.goods-card__pic 
 							+picture("content/card-type-01", "card-img", "jpg", "100%", "100%", "Акустическая гитара").goods-card__img
 						.goods-card__info
-							span.goods-card__info-text Акустические гитары
+							span.goods-card__info-text=data.title
 					.goods-card__counter
 						+btn(data.btnMinus).goods-card__btn.goods-card__btn--minus
 						+custom-input(data.input).goods-card__input

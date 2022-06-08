@@ -13,7 +13,7 @@ main {
 	&__inner-list {
 		display: grid;
 		grid-template-columns: 100px repeat(3, 1fr);
-		grid-column-gap: 150px;
+		grid-column-gap: 20px;
 		list-style: none;
 		margin: 0;
 		padding: 0;
@@ -26,7 +26,7 @@ main {
 	&__row {
 		display: grid;
 		grid-template-columns: 100px repeat(3, 1fr);
-		grid-column-gap: 150px;
+		grid-column-gap: 20px;
 		padding: 50px 0;
 		&.btn-row {
 			.ui-kit__col {
@@ -37,6 +37,11 @@ main {
 			}
 		}
 		&.socials-row {
+			.ui-kit__col {
+				grid-template-rows: auto;
+			}
+		}
+		&.card-row {
 			.ui-kit__col {
 				grid-template-rows: auto;
 			}
@@ -67,8 +72,12 @@ main {
 		}
 	}
 	&__card {
-		max-width: 270px;
-
+		&--type-01 {
+			max-width: 270px;
+		}
+		&--type-02 {
+			max-width: 500px;
+		}
 	}
 }
 
@@ -141,6 +150,15 @@ main {
 						&__btn {
 							border-color: $color-jade;
 							color: $color-jade;
+						}
+					}
+				}
+				&--type-02 {
+					.goods-card {
+						&__info {
+							&-title {
+								color: $color-jade;
+							}
 						}
 					}
 				}
