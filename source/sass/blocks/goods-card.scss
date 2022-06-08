@@ -1,0 +1,77 @@
+.goods-card {
+	&:hover &,
+	&:focus-visible & {
+		&__wrapper {
+			box-shadow: 0px 0px 25px rgba($color-default-black, 0.2);
+		}
+		&__info {
+			color: $color-jade;
+		}
+	}
+	&__wrapper {
+		display: block;
+		background-color: $color-default-white;
+		box-shadow: 0px 0px 10px rgba($color-default-black, 0.15);
+		border-radius: 5px;
+		transition: all $trans-default;
+	}
+	&__pic {
+		border-top-left-radius: inherit;
+		border-top-right-radius: inherit;
+		overflow: hidden;
+	}
+	&__info {
+		min-height: 80px;
+		padding: 15px 20px;
+		transition: color $trans-default;
+		&-text {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+	&__counter {
+		display: flex;
+		margin: 50px 0 0;
+		padding: 30px 0;
+	}
+	&__btn {
+		padding: 10px;
+		border-radius: 100%;
+		background-color: $color-transparent;
+		max-width: 100%;
+		width: 40px;
+		height: 40px;
+		border: 2px solid $color-gainsboro;
+		color: $color-jade;
+		flex: 0 0 40px;
+		&:hover,
+		&:focus-visible {
+			border-color: $color-jade;
+		}
+	}
+	&__input {
+		margin: 0;
+		padding: 0;
+		max-width: 40px;
+		label {
+			input {
+				width: 100%;
+				margin-left: 0;
+				border: 0;
+				border-radius: 0;
+				min-height: unset;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 19px;
+				text-align: center;
+				color: $color-jade;
+				background: $color-transparent;
+				&:hover,
+				&:focus {
+					border: 0;
+				}
+			}
+		}
+	}
+}

@@ -43,7 +43,6 @@
 </symbol></svg>
     </div>
     <div class="wrapper">
-      <style></style>
       <header class="header-ui">
         <div class="container header-ui__container"><a class="components-backwards" href="sitemap.html"><span>&larr;</span><span>вернуться на разводящую</span></a>
           <nav class="header-ui__nav">
@@ -62,7 +61,7 @@
             <h1>UI-kit</h1>
             <div class="ui-kit__wrapper"> 
               <div class="ui-kit__row link-row">
-                <div class="ui-kit__col element"><span>Text link</span></div>
+                <div class="ui-kit__col element"><span class="ui-kit__col-span">Text link</span></div>
                 <div class="ui-kit__col state state--default"><a class="link" href="#">Text link</a><a class="link link--colored" href="#">Смотреть все проекты</a><a class="link link--bolder" href="#">Акции</a></div>
                 <div class="ui-kit__col state state--hover"><a class="link" href="#">Text link</a><a class="link link--colored" href="#">Смотреть все проекты</a><a class="link link--bolder" href="#">Акции</a></div>
                 <div class="ui-kit__col state state--focus"><a class="link link--bolder" href="#">Акции</a></div>
@@ -146,11 +145,101 @@
                       </svg></a></div>
                 </div>
               </div>
+              <div class="ui-kit__row card-row">
+                <div class="ui-kit__col element"><span>Card</span></div>
+                <div class="ui-kit__col state state--default">
+                  <div class="ui-kit__card ui-kit__card--type-01">
+                    <div class="goods-card"><a class="goods-card__wrapper" href="#"> 
+                        <div class="goods-card__pic"> 
+                          <picture class="goods-card__img">
+                            <source type="image/webp" srcset="img/content/card-type-01/card-img.webp, img/content/card-type-01/card-img@2x.webp 2x"><img src="img/content/card-type-01/card-img.jpg" srcset="img/content/card-type-01/card-img@2x.jpg 2x" width="100%" height="100%" alt="Акустическая гитара">
+                          </picture>
+                        </div>
+                        <div class="goods-card__info"><span class="goods-card__info-text">Акустические гитары</span></div></a>
+                      <div class="goods-card__counter">
+                        <button class="btn goods-card__btn goods-card__btn--minus" type="button">-</button>
+                        <div class="custom-input goods-card__input">
+                          <label>
+                            <input type="number" id="counter01" name="counter" value="0">
+                          </label>
+                        </div>
+                        <button class="btn goods-card__btn goods-card__btn--plus" type="button">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui-kit__col state state--hover">
+                  <div class="ui-kit__card ui-kit__card--type-01">
+                    <div class="goods-card"><a class="goods-card__wrapper" href="#"> 
+                        <div class="goods-card__pic"> 
+                          <picture class="goods-card__img">
+                            <source type="image/webp" srcset="img/content/card-type-01/card-img.webp, img/content/card-type-01/card-img@2x.webp 2x"><img src="img/content/card-type-01/card-img.jpg" srcset="img/content/card-type-01/card-img@2x.jpg 2x" width="100%" height="100%" alt="Акустическая гитара">
+                          </picture>
+                        </div>
+                        <div class="goods-card__info"><span class="goods-card__info-text">Акустические гитары</span></div></a>
+                      <div class="goods-card__counter">
+                        <button class="btn goods-card__btn goods-card__btn--minus" type="button">-</button>
+                        <div class="custom-input goods-card__input">
+                          <label>
+                            <input type="number" id="counter01" name="counter" value="0">
+                          </label>
+                        </div>
+                        <button class="btn goods-card__btn goods-card__btn--plus" type="button">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </main>
-      <script></script>
+      <script>/* eslint-disable no-console */
+//  Кнопки плюс и минус -- Начало --
+
+const initCount = () => {
+  const goodsCards = document.querySelectorAll('.goods-card');
+  if (goodsCards.length > 0) {
+    goodsCards.forEach((goodsCard) => {
+      const counterWarning = goodsCard.querySelector('.notification');
+      const input = goodsCard.querySelector('.goods-card__input input');
+      goodsCard.addEventListener('click', (e) => {
+        const target = e.target;
+        if (target.classList.contains('goods-card__btn')) {
+          initCounter(target);
+        }
+      });
+      const initCounter = (btn) => {
+        let counter = input.value;
+        if (btn.classList.contains('goods-card__btn--minus')) {
+          if (counter > 0) {
+            counter--;
+            input.value = counter;
+          } else {
+            if (counterWarning) {
+              counterWarning.classList.add('is-active');
+              setTimeout(() => {
+                counterWarning.classList.remove('is-active');
+              }, 3000);
+              console.log('Не может быть отрицательным!');
+            }
+            console.log('Не может быть отрицательным!');
+          }
+        }
+        if (btn.classList.contains('goods-card__btn--plus')) {
+          counter++;
+          input.value = counter;
+        }
+      };
+    });
+  }
+};
+
+initCount();
+
+//  Кнопки плюс и минус -- Конец --
+
+      </script>
     </div>
     <div class="modal modal--preload modal--feedback" data-modal="feedback">
       <div class="modal__wrapper">

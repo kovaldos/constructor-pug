@@ -457,8 +457,7 @@ img,
 video {
   display: block;
   max-width: 100%;
-  width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -903,7 +902,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   padding: 20px 0;
   /*&.is-valid {
     input {
@@ -1458,48 +1458,6 @@ button,
   opacity: 1;
 }
 
-.header {
-  padding: 28px 0;
-  background-color: #2c39f2;
-}
-
-.header .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.header__logo {
-  color: #ffffff;
-}
-
-.main-nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  margin-right: 20px;
-  margin-left: 60px;
-  padding: 0;
-  list-style: none;
-}
-
-.main-nav__item {
-  margin-right: 20px;
-}
-
-.main-nav__link {
-  color: #ffffff;
-}
-
-.main-nav__link.is-active {
-  opacity: 0.6;
-}
-
-.main-nav__toggle {
-  display: none;
-}
-
 main {
   padding-top: 60px;
 }
@@ -1513,6 +1471,7 @@ main {
   height: 60px;
   background-color: #ffffff;
   position: fixed;
+  z-index: 10;
 }
 
 .header-ui__inner-list {
@@ -1563,7 +1522,7 @@ main {
   grid-row-gap: 10px;
 }
 
-.ui-kit__col span {
+.ui-kit__col-span {
   display: inline-block;
   color: #000000;
   font-weight: 400;
@@ -1586,6 +1545,10 @@ main {
 
 .ui-kit__socials-icon--insta {
   color: #ffffff;
+}
+
+.ui-kit__card {
+  max-width: 270px;
 }
 
 .state--hover .link {
@@ -1651,6 +1614,20 @@ main {
   color: #E53935;
 }
 
+.state--hover .ui-kit__card--type-01 .goods-card__wrapper {
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+.state--hover .ui-kit__card--type-01 .goods-card__info {
+  color: #00B76C;
+}
+
+.state--hover .ui-kit__card--type-01 .goods-card__btn {
+  border-color: #00B76C;
+  color: #00B76C;
+}
+
 .state--focus .link {
   -ms-grid-row: 3;
   grid-row: 3;
@@ -1669,6 +1646,142 @@ main {
   position: absolute;
   left: 5px;
   bottom: 3px;
+}
+
+.header {
+  padding: 28px 0;
+  background-color: #2c39f2;
+}
+
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__logo {
+  color: #ffffff;
+}
+
+.main-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  margin-right: 20px;
+  margin-left: 60px;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  margin-right: 20px;
+}
+
+.main-nav__link {
+  color: #ffffff;
+}
+
+.main-nav__link.is-active {
+  opacity: 0.6;
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+.goods-card:hover .goods-card__wrapper,
+.goods-card:focus-visible .goods-card__wrapper {
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+.goods-card:hover .goods-card__info,
+.goods-card:focus-visible .goods-card__info {
+  color: #00B76C;
+}
+
+.goods-card__wrapper {
+  display: block;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.goods-card__pic {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  overflow: hidden;
+}
+
+.goods-card__info {
+  min-height: 80px;
+  padding: 15px 20px;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.goods-card__info-text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.goods-card__counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px 0 0;
+  padding: 30px 0;
+}
+
+.goods-card__btn {
+  padding: 10px;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  max-width: 100%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #D9D9D9;
+  color: #00B76C;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+}
+
+.goods-card__btn:hover,
+.goods-card__btn:focus-visible {
+  border-color: #00B76C;
+}
+
+.goods-card__input {
+  margin: 0;
+  padding: 0;
+  max-width: 40px;
+}
+
+.goods-card__input label input {
+  width: 100%;
+  margin-left: 0;
+  border: 0;
+  border-radius: 0;
+  min-height: unset;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #00B76C;
+  background: rgba(255, 255, 255, 0);
+}
+
+.goods-card__input label input:hover,
+.goods-card__input label input:focus {
+  border: 0;
 }
 
 .footer {

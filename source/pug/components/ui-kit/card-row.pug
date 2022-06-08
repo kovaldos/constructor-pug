@@ -1,0 +1,44 @@
+mixin card-row()
+	-
+		const data = {
+			btnMinus: {
+				text: "-",
+			},
+			input: {
+				inputType: "number",
+				inputId: "counter01",
+				inputName: "counter",
+				inputValue: "0",
+			},
+			btnPlus: {
+				text: "+",
+			},
+		}
+
+	.ui-kit__row.card-row
+		.ui-kit__col.element
+			span Card
+		.ui-kit__col.state.state--default
+			.ui-kit__card.ui-kit__card--type-01
+				.goods-card
+					a.goods-card__wrapper(href="#") 
+						.goods-card__pic 
+							+picture("content/card-type-01", "card-img", "jpg", "100%", "100%", "Акустическая гитара").goods-card__img
+						.goods-card__info
+							span.goods-card__info-text Акустические гитары
+					.goods-card__counter
+						+btn(data.btnMinus).goods-card__btn.goods-card__btn--minus
+						+custom-input(data.input).goods-card__input
+						+btn(data.btnPlus).goods-card__btn.goods-card__btn--plus
+		.ui-kit__col.state.state--hover
+			.ui-kit__card.ui-kit__card--type-01
+				.goods-card
+					a.goods-card__wrapper(href="#") 
+						.goods-card__pic 
+							+picture("content/card-type-01", "card-img", "jpg", "100%", "100%", "Акустическая гитара").goods-card__img
+						.goods-card__info
+							span.goods-card__info-text Акустические гитары
+					.goods-card__counter
+						+btn(data.btnMinus).goods-card__btn.goods-card__btn--minus
+						+custom-input(data.input).goods-card__input
+						+btn(data.btnPlus).goods-card__btn.goods-card__btn--plus

@@ -4,9 +4,6 @@ block variables
   - const title = "UI-kit"
 
 block main
-  style.
-
-
   header.header-ui
     .container.header-ui__container
       a.components-backwards(href="sitemap.html")
@@ -28,77 +25,16 @@ block main
       .container.ui-kit__container
         h1 UI-kit
         .ui-kit__wrapper 
-          .ui-kit__row.link-row
-            .ui-kit__col.element
-              span Text link
-            .ui-kit__col.state.state--default
-              a.link(href="#") Text link
-              a.link.link--colored(href="#") Смотреть все проекты
-              a.link.link--bolder(href="#") Акции
-            .ui-kit__col.state.state--hover
-              a.link(href="#") Text link
-              a.link.link--colored(href="#") Смотреть все проекты
-              a.link.link--bolder(href="#") Акции
-            .ui-kit__col.state.state--focus
-              a.link.link--bolder(href="#") Акции
-          .ui-kit__row.btn-row
-            .ui-kit__col.element
-              span Button fill
-              span Button stroke
-              span Next / prew
-            .ui-kit__col.state.state--default
-              button(type="button").btn.btn--fill Записаться
-              button(type="button").btn.btn--stroke Записаться
-              button(type="button").btn.btn--nav
-                +icon("icon-chevron-right", 10, 20)
-            .ui-kit__col.state.state--hover
-              button(type="button").btn.btn--fill Записаться
-              button(type="button").btn.btn--stroke Записаться
-              button(type="button").btn.btn--nav
-                +icon("icon-chevron-right", 10, 20)
-            .ui-kit__col.state.state--focus
-          .ui-kit__row.socials-row
-            .ui-kit__col.element
-              span Social
-            .ui-kit__col.state.state--default
-              .ui-kit__socials.socials
-                a.link.ui-kit__socials-link.socials__link(href="#")
-                  +icon("icon-fb", 15, 30).ui-kit__socials-icon.ui-kit__socials-icon--fb.socials__icon.socials__icon--fb
-                a.link.ui-kit__socials-link.ui-kit__socials-link--insta.socials__link.socials__link--insta(href="#")
-                  +icon("icon-insta", 22, 22).ui-kit__socials-icon.ui-kit__socials-icon--insta 
-                a.link.ui-kit__socials-link.socials__link(href="#")
-                  +icon("icon-tg", 30, 25).ui-kit__socials-icon.ui-kit__socials-icon--tg.socials__icon.socials__icon--tg
-                a.link.ui-kit__socials-link.socials__link(href="#")
-                  +icon("icon-tweet", 30, 25).ui-kit__socials-icon.ui-kit__socials-icon--tweet.socials__icon.socials__icon--tweet
-                a.link.ui-kit__socials-link.socials__link(href="#")
-                  +icon("icon-viber", 28, 30).ui-kit__socials-icon.ui-kit__socials-icon--viber.socials__icon.socials__icon--viber
-                a.link.ui-kit__socials-link.socials__link(href="#")
-                  +icon("icon-vk", 30, 18).ui-kit__socials-icon.ui-kit__socials-icon--vk.socials__icon.socials__icon--vk
-                a.link.ui-kit__socials-link.socials__link(href="#")
-                  +icon("icon-whatsapp", 30, 30).ui-kit__socials-icon.ui-kit__socials-icon--whatsapp.socials__icon.socials__icon--whatsapp
-                a.link.ui-kit__socials-link.socials__link(href="#")
-                  +icon("icon-yt", 30, 21).ui-kit__socials-icon.ui-kit__socials-icon--yt.socials__icon.socials__icon--yt
-            .ui-kit__col.state.state--hover
-              .ui-kit__socials.socials
-                a.link.ui-kit__socials-link.socials__link(href="#")
-                  +icon("icon-fb", 15, 30).ui-kit__socials-icon.ui-kit__socials-icon--fb.socials__icon.socials__icon--fb
-                a.link.ui-kit__socials-link.ui-kit__socials-link--insta.socials__link.socials__link--insta(href="#")
-                  +icon("icon-insta", 22, 22).ui-kit__socials-icon.ui-kit__socials-icon--insta
-                a.link.ui-kit__socials-link.socials__link(href="#")
-                  +icon("icon-tg", 30, 25).ui-kit__socials-icon.ui-kit__socials-icon--tg.socials__icon.socials__icon--tg
-                a.link.ui-kit__socials-link.socials__link(href="#")
-                  +icon("icon-tweet", 30, 25).ui-kit__socials-icon.ui-kit__socials-icon--tweet.socials__icon.socials__icon--tweet
-                a.link.ui-kit__socials-link.socials__link(href="#")
-                  +icon("icon-viber", 28, 30).ui-kit__socials-icon.ui-kit__socials-icon--viber.socials__icon.socials__icon--viber
-                a.link.ui-kit__socials-link.socials__link(href="#")
-                  +icon("icon-vk", 30, 18).ui-kit__socials-icon.ui-kit__socials-icon--vk.socials__icon.socials__icon--vk
-                a.link.ui-kit__socials-link.socials__link(href="#")
-                  +icon("icon-whatsapp", 30, 30).ui-kit__socials-icon.ui-kit__socials-icon--whatsapp.socials__icon.socials__icon--whatsapp
-                a.link.ui-kit__socials-link.socials__link(href="#")
-                  +icon("icon-yt", 30, 21).ui-kit__socials-icon.ui-kit__socials-icon--yt.socials__icon.socials__icon--yt
+          +link-row()
+          +btn-row()
+          +socials-row()
+          +card-row()
+          
 
 
   script
+    include ../../js/inline/ui-kit.js
+
 
 block modals
   +modal("modal--feedback")(data-modal="feedback")
