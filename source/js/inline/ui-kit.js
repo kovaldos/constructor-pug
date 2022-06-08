@@ -42,3 +42,23 @@ const initCount = () => {
 initCount();
 
 //  Кнопки плюс и минус -- Конец --
+
+// Вставляем пробелы между разрядами цифр в ценах Старт
+
+const setSpaces = () => {
+  const numbers = document.querySelectorAll('.number-spaced');
+  console.log(numbers);
+  if (numbers.length) {
+    numbers.forEach((number) => {
+      const spaced = number.innerText.replace(
+          /(\d)(?=(\d\d\d)+([^\d]|$))/g,
+          '$1 '
+      );
+      number.innerText = spaced;
+    });
+  }
+};
+
+setSpaces();
+
+// Вставляем пробелы между разрядами цифр в ценах Конец

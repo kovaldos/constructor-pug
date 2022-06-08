@@ -277,7 +277,7 @@
                           </div>
                           <!-- здесь применен h3, но по семантике неизвестна вложенность заголовков. Используйте соответствующий тэг <h> на реальном проекте в соответствии с их вложенностью-->
                           <h3 class="goods-card__info-title title title--h3">Электрогитара Gibson 2019 Les Paul Studio Wine Red</h3>
-                          <div class="goods-card__price"> <span class="goods-card__price-number">56000</span><span class="goods-card__price-currency"> ₽</span></div>
+                          <div class="goods-card__price"> <span class="goods-card__price-number number-spaced">56000</span><span class="goods-card__price-currency"> ₽</span></div>
                         </div></a>
                       <div class="goods-card__action">
                         <div class="goods-card__counter">
@@ -309,7 +309,7 @@
                           </div>
                           <!-- здесь применен h3, но по семантике неизвестна вложенность заголовков. Используйте соответствующий тэг <h> на реальном проекте в соответствии с их вложенностью-->
                           <h3 class="goods-card__info-title title title--h3">Электрогитара Gibson 2019 Les Paul Studio Wine Red</h3>
-                          <div class="goods-card__price"> <span class="goods-card__price-number">56000</span><span class="goods-card__price-currency"> ₽</span></div>
+                          <div class="goods-card__price"> <span class="goods-card__price-number number-spaced">56000</span><span class="goods-card__price-currency"> ₽</span></div>
                         </div></a>
                       <div class="goods-card__action">
                         <div class="goods-card__counter">
@@ -375,6 +375,26 @@ const initCount = () => {
 initCount();
 
 //  Кнопки плюс и минус -- Конец --
+
+// Вставляем пробелы между разрядами цифр в ценах Старт
+
+const setSpaces = () => {
+  const numbers = document.querySelectorAll('.number-spaced');
+  console.log(numbers);
+  if (numbers.length) {
+    numbers.forEach((number) => {
+      const spaced = number.innerText.replace(
+          /(\d)(?=(\d\d\d)+([^\d]|$))/g,
+          '$1 '
+      );
+      number.innerText = spaced;
+    });
+  }
+};
+
+setSpaces();
+
+// Вставляем пробелы между разрядами цифр в ценах Конец
 
       </script>
     </div>
