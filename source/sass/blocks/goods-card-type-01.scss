@@ -12,7 +12,9 @@
 							box-shadow: 0px 0px 25px rgba($color-default-black, 0.2);
 						}
 						&__info {
-							color: $color-jade;
+							&-title {
+								color: $color-jade;
+							}
 						}
 					}
 				}
@@ -35,11 +37,6 @@
 					min-height: 80px;
 					padding: 15px 20px;
 					transition: color $trans-default;
-					&-text {
-						font-weight: 700;
-						font-size: 18px;
-						line-height: 22px;
-					}
 				}
 				&__counter {
 					display: flex;

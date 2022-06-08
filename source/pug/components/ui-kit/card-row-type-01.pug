@@ -27,7 +27,7 @@ mixin card-row-type-01()
 						.goods-card__pic 
 							+picture("content/card-type-01", "card-img", "jpg", "100%", "100%", "Акустическая гитара").goods-card__img
 						.goods-card__info
-							span.goods-card__info-text=data.title
+							h2.goods-card__info-title.title.title--h2=data.title
 					.goods-card__counter
 						+btn(data.btnMinus).goods-card__btn.goods-card__btn--minus
 						+custom-input(data.input).goods-card__input
@@ -39,7 +39,7 @@ mixin card-row-type-01()
 						.goods-card__pic 
 							+picture("content/card-type-01", "card-img", "jpg", "100%", "100%", "Акустическая гитара").goods-card__img
 						.goods-card__info
-							span.goods-card__info-text=data.title
+							h2.goods-card__info-title.title.title--h2=data.title
 					.goods-card__counter
 						+btn(data.btnMinus).goods-card__btn.goods-card__btn--minus
 						+custom-input(data.input).goods-card__input
