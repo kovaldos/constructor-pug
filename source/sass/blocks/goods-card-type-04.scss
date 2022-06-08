@@ -1,0 +1,122 @@
+.ui-kit {
+	&__card {
+		&--type-04 {
+			.goods-card {
+				// для реального проекта копируем class goods-card и всё, что внутри.
+				position: relative;
+				max-width: 270px;
+				padding: 15px 0;
+				&:focus-visible {
+					outline: none;
+				}
+				&:hover,
+				&:focus-visible {
+					.goods-card {
+						&__pic {
+							box-shadow: 0px 0px 25px rgba($color-default-black, 0.2);
+						}
+						&__info {
+							&-title {
+								color: $color-jade;
+							}
+						}
+					}
+				}
+				&__pic {
+					border-radius: 5px;
+					overflow: hidden;
+					box-shadow: 0px 0px 10px rgba($color-default-black, 0.15);
+					transition: all $trans-default;
+				}
+				&__info {
+					margin: 15px 0 0;
+					display: flex;
+					flex-direction: column;
+					&-row {
+						display: flex;
+					}
+					&-article {
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 15px;
+						color: $color-dark-gray;
+						white-space: nowrap;
+					}
+					&-availability {
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 15px;
+						color: $color-jade;
+						padding: 0 0 0 30px;
+					}
+					&-text {
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 15px;
+						color: $color-dark-gray;
+					}
+					&-title {
+						margin: 10px 0 15px;
+					}
+				}
+				&__price {
+					font-weight: 700;
+					font-size: 18px;
+					line-height: 22px;
+					color: $color-default-black;
+				}
+				&__action {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					margin: 20px 0 0;
+				}
+				&__counter {
+					display: flex;
+				}
+				&__btn {
+					padding: 10px;
+					border-radius: 100%;
+					background-color: $color-transparent;
+					max-width: 100%;
+					width: 40px;
+					height: 40px;
+					border: 2px solid $color-gainsboro;
+					color: $color-jade;
+					flex: 0 0 40px;
+					&:hover,
+					&:focus-visible {
+						border-color: $color-jade;
+					}
+				}
+				&__input {
+					margin: 0;
+					padding: 0;
+					max-width: 40px;
+					label {
+						input {
+							width: 100%;
+							margin-left: 0;
+							border: 0;
+							border-radius: 0;
+							min-height: unset;
+							font-weight: 700;
+							font-size: 16px;
+							line-height: 19px;
+							text-align: center;
+							color: $color-jade;
+							background: $color-transparent;
+							&:hover,
+							&:focus {
+								border: 0;
+							}
+						}
+					}
+				}
+				&__btn-buy {
+					padding: 10px 26px 11px;
+				}
+			}
+		}
+	}
+}

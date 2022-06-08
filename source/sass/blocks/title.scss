@@ -1,0 +1,19 @@
+.title {
+	margin: 0;
+	padding: 0;
+	transition: color $trans-default;
+	&--h1 {
+	}
+	&--h2 {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 22px;
+		color: $color-default-black;
+	}
+	&--h3 {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 19px;
+		color: $color-default-black;
+	}
+}

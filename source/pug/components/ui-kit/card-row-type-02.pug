@@ -1,0 +1,35 @@
+mixin card-row-type-02()
+	-
+		const data = {
+			date: "08.06.2022",
+			title: "Новый филиал в Санкт-Петербурге",
+			text: "Лучшие электрогитары нашего города по доступной цене и доставкой на дом",
+
+		}
+
+	.ui-kit__row.card-row.card-row--type-02
+		.ui-kit__col.element
+			span
+		.ui-kit__col.state.state--default
+			.ui-kit__card.ui-kit__card--type-02
+				// для реального проекта копируем class goods-card и всё, что внутри.
+				.goods-card(tabindex="0")
+					a.goods-card__wrapper(href="#") 
+						.goods-card__pic 
+							+picture("content/card-type-02", "card-img", "jpg", "100%", "100%", "Упаковки с подарками").goods-card__img
+						.goods-card__info
+							small.goods-card__info-date=data.date
+							h2.goods-card__info-title.title.title--h2=data.title
+							// здесь применен h2, но по семантике неизвестна вложенность заголовков. Используйте соответствующий тэг <h> на реальном проекте в соответствии с их вложенностью
+							span.goods-card__info-text=data.text
+		.ui-kit__col.state.state--hover
+			.ui-kit__card.ui-kit__card--type-02
+				.goods-card(tabindex="0")
+					a.goods-card__wrapper(href="#") 
+						.goods-card__pic 
+							+picture("content/card-type-02", "card-img", "jpg", "100%", "100%", "Упаковки с подарками").goods-card__img
+						.goods-card__info
+							small.goods-card__info-date=data.date
+							h2.goods-card__info-title.title.title--h2=data.title
+							// здесь применен h2, но по семантике неизвестна вложенность заголовков. Используйте соответствующий тэг <h> на реальном проекте в соответствии с их вложенностью
+							span.goods-card__info-text=data.text

@@ -1,0 +1,82 @@
+mixin card-row-type-04()
+	-
+		const data = {
+			sale: "Акция",
+			article: {
+				text: "Артикул: ",
+				number: "263484628"},
+			availability: "В наличии",
+			title: "Электрогитара Gibson 2019 Les Paul Studio Wine Red",
+			price: {
+				number: "56000",
+				currency: " ₽"	
+			},
+			btnMinus: {
+				text: "-",
+			},
+			input: {
+				inputType: "number",
+				inputId: "counter01",
+				inputName: "counter",
+				inputValue: "0",
+			},
+			btnPlus: {
+				text: "+",
+			},
+			btnBuy: {
+				text: "В корзину",
+			}
+		}
+
+	.ui-kit__row.card-row.card-row--type-04
+		.ui-kit__col.element
+			span
+		.ui-kit__col.state.state--default
+			.ui-kit__card.ui-kit__card--type-04
+				// для реального проекта копируем class goods-card и всё, что внутри.
+				.goods-card(tabindex="0")
+					a.goods-card__wrapper(href="#") 
+						.goods-card__pic 
+							+picture("content/card-type-04", "card-img", "jpg", "100%", "100%", "Электрогитара").goods-card__img
+						.goods-card__info
+							.goods-card__info-row
+								.goods-card__info-article
+									span.goods-card__info-article-text=data.article.text
+									span.goods-card__info-article-number=data.article.number
+								.goods-card__info-availability
+									span.goods-card__info-availability-text=data.availability
+							// здесь применен h3, но по семантике неизвестна вложенность заголовков. Используйте соответствующий тэг <h> на реальном проекте в соответствии с их вложенностью
+							h3.goods-card__info-title.title.title--h3=data.title
+							.goods-card__price 
+								span.goods-card__price-number.number-spaced=data.price.number
+								span.goods-card__price-currency=data.price.currency
+					.goods-card__action
+						.goods-card__counter
+							+btn(data.btnMinus).goods-card__btn.goods-card__btn--minus
+							+custom-input(data.input).goods-card__input
+							+btn(data.btnPlus).goods-card__btn.goods-card__btn--plus
+						+btn(data.btnBuy).goods-card__btn-buy.btn--fill
+		.ui-kit__col.state.state--hover
+			.ui-kit__card.ui-kit__card--type-04
+				.goods-card(tabindex="0")
+					a.goods-card__wrapper(href="#") 
+						.goods-card__pic 
+							+picture("content/card-type-04", "card-img", "jpg", "100%", "100%", "Электрогитара").goods-card__img
+						.goods-card__info
+							.goods-card__info-row
+								.goods-card__info-article
+									span.goods-card__info-article-text=data.article.text
+									span.goods-card__info-article-number=data.article.number
+								.goods-card__info-availability
+									span.goods-card__info-availability-text=data.availability
+							// здесь применен h3, но по семантике неизвестна вложенность заголовков. Используйте соответствующий тэг <h> на реальном проекте в соответствии с их вложенностью
+							h3.goods-card__info-title.title.title--h3=data.title
+							.goods-card__price 
+								span.goods-card__price-number.number-spaced=data.price.number
+								span.goods-card__price-currency=data.price.currency
+					.goods-card__action
+						.goods-card__counter
+							+btn(data.btnMinus).goods-card__btn.goods-card__btn--minus
+							+custom-input(data.input).goods-card__input
+							+btn(data.btnPlus).goods-card__btn.goods-card__btn--plus
+						+btn(data.btnBuy).goods-card__btn-buy.btn--fill

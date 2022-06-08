@@ -1,0 +1,18 @@
+mixin btn-row()
+
+	.ui-kit__row.btn-row
+		.ui-kit__col.element
+			span Button fill
+			span Button stroke
+			span Next / prew
+		.ui-kit__col.state.state--default
+			button(type="button").btn.btn--fill Записаться
+			button(type="button").btn.btn--stroke Записаться
+			button(type="button").btn.btn--nav
+				+icon("icon-chevron-right", 10, 20)
+		.ui-kit__col.state.state--hover
+			button(type="button").btn.btn--fill Записаться
+			button(type="button").btn.btn--stroke Записаться
+			button(type="button").btn.btn--nav
+				+icon("icon-chevron-right", 10, 20)
+		.ui-kit__col.state.state--focus
