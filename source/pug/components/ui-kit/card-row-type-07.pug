@@ -1,0 +1,39 @@
+mixin card-row-type-07()
+	-
+		const data = {
+			text: "Изготовление инструмента",
+			title: "Электрогитара Gibson 2019 Les Paul Studio Wine Red",
+			
+			btn: {
+				href: "#",
+				text: "Смотреть проект",
+			}
+
+		}
+
+	.ui-kit__row.card-row.card-row--type-07
+		.ui-kit__col.element
+			span
+		.ui-kit__col.state.state--default
+			.ui-kit__card.ui-kit__card--type-07
+				// для реального проекта копируем class goods-card и всё, что внутри.
+				.goods-card(tabindex="0")
+					.goods-card__wrapper
+						.goods-card__pic 
+							+picture("content/card-type-03", "card-img", "jpg", "100%", "100%", "Электрогитара").goods-card__img
+							+btn(data.btn).goods-card__link
+						.goods-card__info
+							span.goods-card__info-text=data.text
+							h3.goods-card__info-title.title.title--h3=data.title
+							// здесь применен h3, но по семантике неизвестна вложенность заголовков. Используйте соответствующий тэг <h> на реальном проекте в соответствии с их вложенностью
+		.ui-kit__col.state.state--hover
+			.ui-kit__card.ui-kit__card--type-07
+				.goods-card(tabindex="0")
+					.goods-card__wrapper 
+						.goods-card__pic
+							+picture("content/card-type-03", "card-img", "jpg", "100%", "100%", "Электрогитара").goods-card__img
+							+btn(data.btn).goods-card__link
+						.goods-card__info
+							span.goods-card__info-text=data.text
+							h3.goods-card__info-title.title.title--h3=data.title
+							// здесь применен h3, но по семантике неизвестна вложенность заголовков. Используйте соответствующий тэг <h> на реальном проекте в соответствии с их вложенностью

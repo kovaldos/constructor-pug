@@ -204,6 +204,26 @@ main {
 						}
 					}
 				}
+				&--type-07 {
+					.goods-card {
+						&__info {
+							&-title {
+								color: $color-jade;
+							}
+						}
+						&__pic {
+							box-shadow: 0px 0px 25px rgba($color-default-black, 0.2);
+						}
+						&__img {
+							filter: brightness(0.7);
+						}
+						&__link {
+							opacity: 1;
+							visibility: visible;
+							pointer-events: all;
+						}
+					}
+				}
 			}
 		}
 	}

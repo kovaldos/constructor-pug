@@ -768,7 +768,7 @@ button,
   -ms-flex-pack: center;
   justify-content: center;
   padding: 10px 40px 11px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #00B76C;
   border: none;
   cursor: pointer;
   border-radius: 40px;
@@ -1714,6 +1714,26 @@ main {
   color: #00B76C;
 }
 
+.state--hover .ui-kit__card--type-07 .goods-card__info-title {
+  color: #00B76C;
+}
+
+.state--hover .ui-kit__card--type-07 .goods-card__pic {
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+.state--hover .ui-kit__card--type-07 .goods-card__img {
+  -webkit-filter: brightness(0.7);
+  filter: brightness(0.7);
+}
+
+.state--hover .ui-kit__card--type-07 .goods-card__link {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
 .state--focus .link {
   -ms-grid-row: 3;
   grid-row: 3;
@@ -2262,6 +2282,98 @@ main {
   font-size: 14px;
   line-height: 17px;
   color: #525151;
+}
+
+.ui-kit__card--type-07 .goods-card {
+  max-width: 220px;
+  padding: 15px 0;
+}
+
+.ui-kit__card--type-07 .goods-card:focus-visible {
+  outline: none;
+}
+
+.ui-kit__card--type-07 .goods-card:hover .goods-card__pic,
+.ui-kit__card--type-07 .goods-card:focus-visible .goods-card__pic {
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+.ui-kit__card--type-07 .goods-card:hover .goods-card__img,
+.ui-kit__card--type-07 .goods-card:focus-visible .goods-card__img {
+  -webkit-filter: brightness(0.7);
+  filter: brightness(0.7);
+}
+
+.ui-kit__card--type-07 .goods-card:hover .goods-card__info-title,
+.ui-kit__card--type-07 .goods-card:focus-visible .goods-card__info-title {
+  color: #00B76C;
+}
+
+.ui-kit__card--type-07 .goods-card:hover .goods-card__link,
+.ui-kit__card--type-07 .goods-card:focus-visible .goods-card__link {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.ui-kit__card--type-07 .goods-card__wrapper {
+  display: inline-block;
+}
+
+.ui-kit__card--type-07 .goods-card__link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 10px 20px 11px 21px;
+  color: #ffffff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.ui-kit__card--type-07 .goods-card__pic {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.ui-kit__card--type-07 .goods-card__img {
+  -webkit-transition: -webkit-filter 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out;
+  -o-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+}
+
+.ui-kit__card--type-07 .goods-card__info {
+  margin: 15px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.ui-kit__card--type-07 .goods-card__info-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #A6A6A6;
+}
+
+.ui-kit__card--type-07 .goods-card__info-title {
+  margin: 10px 0;
 }
 
 .footer {
