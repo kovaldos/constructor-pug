@@ -188,6 +188,22 @@ main {
 						}
 					}
 				}
+				&--type-05 {
+					.article-card {
+						&__wrapper {
+							box-shadow: 0px 0px 25px rgba($color-default-black, 0.2);
+						}
+					}
+				}
+				&--type-06 {
+					.goods-card {
+						&__info {
+							&-title {
+								color: $color-jade;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
