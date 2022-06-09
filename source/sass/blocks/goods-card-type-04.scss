@@ -3,7 +3,7 @@
 		&--type-04 {
 			.goods-card {
 				// для реального проекта копируем class goods-card и всё, что внутри.
-				position: relative;
+
 				max-width: 270px;
 				padding: 15px 0;
 				&:focus-visible {
@@ -20,6 +20,23 @@
 								color: $color-jade;
 							}
 						}
+					}
+				}
+				&__wrapper {
+					display: inline-block;
+					position: relative;
+				}
+				&__sale {
+					position: absolute;
+					top: 20px;
+					left: 15px;
+					padding: 3px 11px;
+					background-color: $color-cinnabar;
+					&-text {
+						font-weight: 700;
+						font-size: 16px;
+						line-height: 19px;
+						color: $color-default-white;
 					}
 				}
 				&__pic {

@@ -35,7 +35,9 @@ mixin card-row-type-04()
 			.ui-kit__card.ui-kit__card--type-04
 				// для реального проекта копируем class goods-card и всё, что внутри.
 				.goods-card(tabindex="0")
-					a.goods-card__wrapper(href="#") 
+					a.goods-card__wrapper(href="#")
+						.goods-card__sale
+							span.goods-card__sale-text=data.sale
 						.goods-card__pic 
 							+picture("content/card-type-04", "card-img", "jpg", "100%", "100%", "Электрогитара").goods-card__img
 						.goods-card__info
@@ -59,7 +61,9 @@ mixin card-row-type-04()
 		.ui-kit__col.state.state--hover
 			.ui-kit__card.ui-kit__card--type-04
 				.goods-card(tabindex="0")
-					a.goods-card__wrapper(href="#") 
+					a.goods-card__wrapper(href="#")
+						.goods-card__sale
+							span.goods-card__sale-text=data.sale
 						.goods-card__pic 
 							+picture("content/card-type-04", "card-img", "jpg", "100%", "100%", "Электрогитара").goods-card__img
 						.goods-card__info

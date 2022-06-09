@@ -1,0 +1,58 @@
+.ui-kit {
+	&__card {
+		&--type-08 {
+			.article-card {
+				// для реального проекта копируем class article-card и всё, что внутри.
+				position: relative;
+				max-width: 370px;
+				padding: 15px 0;
+				&:focus-visible {
+					outline: none;
+				}
+				&:hover,
+				&:focus-visible {
+					.article-card {
+						&__wrapper {
+							filter: drop-shadow(0px 0px 20px rgba($color-default-black, 0.25));
+						}
+					}
+				}
+				&__wrapper {
+					position: relative;
+					display: flex;
+					transition: filter $trans-default;
+				}
+				&__pic {
+					border-radius: 5px;
+					overflow: hidden;
+					position: relative;
+					&::before {
+						content: "";
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						background: linear-gradient(180deg, rgba(0, 0, 0, 0) 43.75%, #000000 93.75%);
+						border-radius: inherit;
+					}
+				}
+				&__info {
+					position: absolute;
+					left: 30px;
+					bottom: 30px;
+					display: flex;
+					flex-direction: column;
+					max-width: 75%;
+					&-title {
+						margin: 0 0 10px;
+						color: $color-default-white;
+					}
+				}
+				&__text {
+					color: $color-default-white;
+				}
+			}
+		}
+	}
+}
