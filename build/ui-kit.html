@@ -446,6 +446,40 @@
                   </div>
                 </div>
               </div>
+              <div class="ui-kit__row card-row card-row--type-08">
+                <div class="ui-kit__col element"><span></span></div>
+                <div class="ui-kit__col state state--default">
+                  <div class="ui-kit__card ui-kit__card--type-08">
+                    <!-- для реального проекта копируем class article-card и всё, что внутри.-->
+                    <article class="article-card" tabindex="0"><a class="article-card__wrapper" href="#"> 
+                        <div class="article-card__pic">
+                          <picture>
+                            <source type="image/webp" srcset="img/content/card-type-08/card-img.webp, img/content/card-type-08/card-img@2x.webp 2x"><img src="img/content/card-type-08/card-img.jpg" srcset="img/content/card-type-08/card-img@2x.jpg 2x" width="100%" height="100%" alt="Барабанные палочки лежат на барабане">
+                          </picture>
+                        </div>
+                        <div class="article-card__info">
+                          <!-- здесь применен h4, но по семантике неизвестна вложенность заголовков. Используйте соответствующий тэг <h> на реальном проекте в соответствии с их вложенностью-->
+                          <h4 class="article-card__info-title title title--h4">Lorem ipsum</h4>
+                          <p class="article-card__text text text--sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu eget tempor id at nec.</p>
+                        </div></a></article>
+                  </div>
+                </div>
+                <div class="ui-kit__col state state--hover">
+                  <div class="ui-kit__card ui-kit__card--type-08">
+                    <div class="article-card" tabindex="0"><a class="article-card__wrapper" href="#"> 
+                        <div class="article-card__pic">
+                          <picture>
+                            <source type="image/webp" srcset="img/content/card-type-08/card-img.webp, img/content/card-type-08/card-img@2x.webp 2x"><img src="img/content/card-type-08/card-img.jpg" srcset="img/content/card-type-08/card-img@2x.jpg 2x" width="100%" height="100%" alt="Барабанные палочки лежат на барабане">
+                          </picture>
+                        </div>
+                        <div class="article-card__info">
+                          <!-- здесь применен h4, но по семантике неизвестна вложенность заголовков. Используйте соответствующий тэг <h> на реальном проекте в соответствии с их вложенностью-->
+                          <h4 class="article-card__info-title title title--h4">Lorem ipsum</h4>
+                          <p class="article-card__text text text--sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu eget tempor id at nec.</p>
+                        </div></a></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -499,8 +533,8 @@ initCount();
 
 const setSpaces = () => {
   const numbers = document.querySelectorAll('.number-spaced');
-  console.log(numbers);
   if (numbers.length) {
+    console.log(numbers);
     numbers.forEach((number) => {
       const spaced = number.innerText.replace(
           /(\d)(?=(\d\d\d)+([^\d]|$))/g,

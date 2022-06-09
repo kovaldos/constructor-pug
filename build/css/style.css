@@ -1734,6 +1734,11 @@ main {
   pointer-events: all;
 }
 
+.state--hover .ui-kit__card--type-08 .article-card__wrapper {
+  -webkit-filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+}
+
 .state--focus .link {
   -ms-grid-row: 3;
   grid-row: 3;
@@ -2374,6 +2379,76 @@ main {
 
 .ui-kit__card--type-07 .goods-card__info-title {
   margin: 10px 0;
+}
+
+.ui-kit__card--type-08 .article-card {
+  position: relative;
+  max-width: 370px;
+  padding: 15px 0;
+}
+
+.ui-kit__card--type-08 .article-card:focus-visible {
+  outline: none;
+}
+
+.ui-kit__card--type-08 .article-card:hover .article-card__wrapper,
+.ui-kit__card--type-08 .article-card:focus-visible .article-card__wrapper {
+  -webkit-filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+}
+
+.ui-kit__card--type-08 .article-card__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-filter 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out;
+  -o-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+}
+
+.ui-kit__card--type-08 .article-card__pic {
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ui-kit__card--type-08 .article-card__pic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(43.75%, rgba(0, 0, 0, 0)), color-stop(93.75%, #000000));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 43.75%, #000000 93.75%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 43.75%, #000000 93.75%);
+  border-radius: inherit;
+}
+
+.ui-kit__card--type-08 .article-card__info {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 75%;
+}
+
+.ui-kit__card--type-08 .article-card__info-title {
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.ui-kit__card--type-08 .article-card__text {
+  color: #ffffff;
 }
 
 .footer {

@@ -1,0 +1,31 @@
+mixin card-row-type-08()
+	-
+		const data = {
+			title: "Lorem ipsum",
+			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu eget tempor id at nec.",
+		}
+
+	.ui-kit__row.card-row.card-row--type-08
+		.ui-kit__col.element
+			span
+		.ui-kit__col.state.state--default
+			.ui-kit__card.ui-kit__card--type-08
+				// для реального проекта копируем class article-card и всё, что внутри.
+				article.article-card(tabindex="0")
+					a.article-card__wrapper(href="#") 
+						.article-card__pic
+							+picture("content/card-type-08", "card-img", "jpg", "100%", "100%", "Барабанные палочки лежат на барабане").
+						.article-card__info
+							// здесь применен h4, но по семантике неизвестна вложенность заголовков. Используйте соответствующий тэг <h> на реальном проекте в соответствии с их вложенностью
+							h4.article-card__info-title.title.title--h4=data.title
+							p.article-card__text.text.text--sm=data.text
+		.ui-kit__col.state.state--hover
+			.ui-kit__card.ui-kit__card--type-08
+				.article-card(tabindex="0")
+					a.article-card__wrapper(href="#") 
+						.article-card__pic
+							+picture("content/card-type-08", "card-img", "jpg", "100%", "100%", "Барабанные палочки лежат на барабане").
+						.article-card__info
+							// здесь применен h4, но по семантике неизвестна вложенность заголовков. Используйте соответствующий тэг <h> на реальном проекте в соответствии с их вложенностью
+							h4.article-card__info-title.title.title--h4=data.title
+							p.article-card__text.text.text--sm=data.text

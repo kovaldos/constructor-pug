@@ -302,8 +302,8 @@ initCount();
 
 const setSpaces = () => {
   const numbers = document.querySelectorAll('.number-spaced');
-  console.log(numbers);
   if (numbers.length) {
+    console.log(numbers);
     numbers.forEach((number) => {
       const spaced = number.innerText.replace(
           /(\d)(?=(\d\d\d)+([^\d]|$))/g,
