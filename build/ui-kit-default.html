@@ -193,24 +193,24 @@
             <div data-validate>
               <form method="post">
                 <div class="custom-input" data-validate-type="text" data-limitations="name">
-                  <label><span class="custom-input__label">Введите ваше имя</span>
-                    <input type="text" name="user-name" minlength="2">
+                  <label>
+                    <input type="text" name="user-name" minlength="2"><span class="custom-input__label">Введите ваше имя</span>
                   </label>
                   <div class="custom-input__error">Не корректное имя</div>
                 </div>
                 <p>Пример вызова</p><code>
                   <pre>+custom-input({inputLabel: "Введите ваше имя", inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")</pre></code>
                 <div class="custom-input" data-validate-type="phone">
-                  <label><span class="custom-input__label">Введите ваш телефон</span>
-                    <input type="tel" name="user-phone">
+                  <label>
+                    <input type="tel" name="user-phone"><span class="custom-input__label">Введите ваш телефон</span>
                   </label>
                   <div class="custom-input__error">Не корректный телефон</div>
                 </div>
                 <p>Пример вызова</p><code>
                   <pre>+custom-input({inputLabel: "Введите ваш телефон", inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")</pre></code>
                 <div class="custom-input" data-validate-type="email">
-                  <label><span class="custom-input__label">Введите ваш email</span>
-                    <input type="email" name="user-email">
+                  <label>
+                    <input type="email" name="user-email"><span class="custom-input__label">Введите ваш email</span>
                   </label>
                   <div class="custom-input__error">Не корректный email</div>
                 </div>
@@ -306,8 +306,8 @@ const setSpaces = () => {
     console.log(numbers);
     numbers.forEach((number) => {
       const spaced = number.innerText.replace(
-          /(\d)(?=(\d\d\d)+([^\d]|$))/g,
-          '$1 '
+        /(\d)(?=(\d\d\d)+([^\d]|$))/g,
+        '$1 '
       );
       number.innerText = spaced;
     });
@@ -317,6 +317,34 @@ const setSpaces = () => {
 setSpaces();
 
 // Вставляем пробелы между разрядами цифр в ценах Конец
+
+// Скользящий лэйбл у инпута -- Начало --
+// Sliding label at input -- Start --
+
+function slideInputLabel() {
+  const inputs = document.querySelectorAll('[data-slide-label] input');
+  if (inputs.length) {
+    inputs.forEach((input) => {
+      const label = input.nextElementSibling;
+      input.addEventListener('focus', () => {
+        if (!label.classList.contains('is-slided')) {
+          label.classList.add('is-slided');
+        }
+      });
+      input.addEventListener('blur', () => {
+        if (input.value.length <= 2 || input.value.trim().length === 0) {
+          console.log(input.value.length);
+          label.classList.remove('is-slided');
+        }
+      });
+    });
+  }
+}
+
+slideInputLabel();
+
+// Скользящий лэйбл у инпута -- Конец --
+// Sliding label at input -- End --
 
       </script>
     </div>

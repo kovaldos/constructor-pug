@@ -51,8 +51,8 @@ const setSpaces = () => {
     console.log(numbers);
     numbers.forEach((number) => {
       const spaced = number.innerText.replace(
-          /(\d)(?=(\d\d\d)+([^\d]|$))/g,
-          '$1 '
+        /(\d)(?=(\d\d\d)+([^\d]|$))/g,
+        '$1 '
       );
       number.innerText = spaced;
     });
@@ -62,3 +62,31 @@ const setSpaces = () => {
 setSpaces();
 
 // Вставляем пробелы между разрядами цифр в ценах Конец
+
+// Скользящий лэйбл у инпута -- Начало --
+// Sliding label at input -- Start --
+
+function slideInputLabel() {
+  const inputs = document.querySelectorAll('[data-slide-label] input');
+  if (inputs.length) {
+    inputs.forEach((input) => {
+      const label = input.nextElementSibling;
+      input.addEventListener('focus', () => {
+        if (!label.classList.contains('is-slided')) {
+          label.classList.add('is-slided');
+        }
+      });
+      input.addEventListener('blur', () => {
+        if (input.value.length <= 2 || input.value.trim().length === 0) {
+          console.log(input.value.length);
+          label.classList.remove('is-slided');
+        }
+      });
+    });
+  }
+}
+
+slideInputLabel();
+
+// Скользящий лэйбл у инпута -- Конец --
+// Sliding label at input -- End --

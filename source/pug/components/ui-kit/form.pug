@@ -1,0 +1,62 @@
+mixin form()
+	-
+		const data = {
+			title1: "Default",
+			inputTel: {
+				inputLabel: "Телефон",
+				inputError: "Поле обязательно для заполнения",
+			},
+			inputText: {
+				inputLabel: "Имя",
+				inputError: "Поле обязательно для заполнения",
+				inputMinLength: "2",
+			},
+			inputTel2: {
+				inputLabel: "Телефон",
+				inputError: "Поле обязательно для заполнения",
+				inputValue: "+7(645) 651 61 32",
+			},
+			inputText2: {
+				inputLabel: "Имя",
+				inputError: "Поле обязательно для заполнения",
+				inputValue: "Имя",
+				inputMinLength: "2",
+			},
+			inputTel3: {
+				inputLabel: "Телефон",
+				inputError: "Поле обязательно для заполнения",
+			},
+			inputText3: {
+				inputLabel: "Имя",
+				inputError: "Поле обязательно для заполнения",
+				inputMinLength: "2",
+			},
+		}
+
+	.ui-kit__row.form-row.form-row--type-01
+		.ui-kit__col.element
+			span
+		.ui-kit__col.state.state--default
+			.ui-kit__form.ui-kit__form--type-01
+				.form.form--01(data-validate)
+					form.ui-kit__form-form.form__form(action="#", method="post")
+						+custom-input(data.inputTel).form__input(data-validate-type="phone" data-slide-label)
+						+custom-input(data.inputText).form__input(data-validate-type="text" data-slide-label)
+		.ui-kit__col.state.state--focus
+			.ui-kit__form.ui-kit__form--type-01
+				.form.form--01(data-validate)
+					form.ui-kit__form-form.form__form(action="#", method="post")
+						+custom-input(data.inputTel).form__input(data-validate-type="phone" data-slide-label)
+						+custom-input(data.inputText).form__input(data-validate-type="text" data-slide-label)
+		.ui-kit__col.state.state--text
+			.ui-kit__form.ui-kit__form--type-01
+				.form.form--01(data-validate)
+					form.ui-kit__form-form.form__form(action="#", method="post")
+						+custom-input(data.inputTel2).form__input(data-validate-type="phone" data-slide-label)
+						+custom-input(data.inputText2).form__input(data-validate-type="text" data-slide-label)
+		.ui-kit__col.state.state--error
+			.ui-kit__form.ui-kit__form--type-01
+				.form.form--01(data-validate)
+					form.ui-kit__form-form.form__form(action="#", method="post")
+						+custom-input(data.inputTel3).form__input.is-invalid(data-validate-type="phone" data-slide-label)
+						+custom-input(data.inputText3).form__input.is-invalid(data-validate-type="text" data-slide-label)
