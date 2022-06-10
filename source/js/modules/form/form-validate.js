@@ -147,7 +147,9 @@ const prettifyPhoneInput = (input) => {
 
 const onFocusPhoneInput = ({target}) => {
   if (!target.value) {
-    target.value = BASE_COUNTRY_CODE;
+    setTimeout(() => {
+      target.value = BASE_COUNTRY_CODE;
+    }, 300);
   }
 
   target.addEventListener('input', onInputPhoneInput);

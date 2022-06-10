@@ -1,0 +1,60 @@
+.ui-kit {
+	&__form {
+		&--type-01 {
+			// для реального проекта копируем class .form и всё, что внутри.
+			.form {
+				width: 100%;
+				.custom-input {
+					label {
+						input {
+							margin-left: 0;
+							padding: 12px 20px 13px 20px;
+							min-height: unset;
+							background: $color-default-white;
+							border: 1px solid $color-light-gray;
+							color: $color-default-black;
+							&:hover,
+							&:focus-visible {
+								border-color: $color-matterhorn;
+							}
+						}
+					}
+					&__label {
+						color: $color-light-gray;
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 15px;
+						transition: all $trans-default;
+					}
+					&[data-slide-label] {
+						.custom-input__label {
+							position: absolute;
+							top: 50%;
+							transform: translateY(-50%);
+							left: 20px;
+							&.is-slided {
+								transform: translateY(-50px);
+								font-size: 14px;
+								color: $color-dim-gray;
+							}
+						}
+					}
+					&.is-invalid {
+						input {
+							border: 1px solid $color-cinnabar;
+						}
+					}
+					&__error {
+						left: 20px;
+						right: auto;
+						top: 5px;
+						bottom: auto;
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 15px;
+					}
+				}
+			}
+		}
+	}
+}

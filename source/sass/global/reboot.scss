@@ -41,6 +41,9 @@ body {
 a {
   color: $color-default-black;
   text-decoration: none;
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 img,

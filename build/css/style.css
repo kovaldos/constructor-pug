@@ -453,6 +453,10 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible {
+  outline: none;
+}
+
 img,
 video {
   display: block;
@@ -1565,6 +1569,16 @@ main {
   grid-template-rows: auto;
 }
 
+.ui-kit__row.form-row {
+  -ms-grid-columns: 100px (1fr)[5];
+  grid-template-columns: 100px repeat(5, 1fr);
+}
+
+.ui-kit__row.form-row .ui-kit__col {
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
 .ui-kit__col {
   display: -ms-grid;
   display: grid;
@@ -1757,6 +1771,26 @@ main {
   position: absolute;
   left: 5px;
   bottom: 3px;
+}
+
+.state--focus .form__input label input {
+  border-color: #525151 !important;
+}
+
+.state--text .form .custom-input label input {
+  border-color: #525151 !important;
+}
+
+.state--text .form .custom-input__label {
+  -webkit-transform: translateY(-50px) !important;
+  -ms-transform: translateY(-50px) !important;
+  transform: translateY(-50px) !important;
+  font-size: 14px !important;
+  color: #6B6868 !important;
+}
+
+.state--error .form .custom-input {
+  pointer-events: none;
 }
 
 .header {
@@ -2449,6 +2483,65 @@ main {
 
 .ui-kit__card--type-08 .article-card__text {
   color: #ffffff;
+}
+
+.ui-kit__form--type-01 .form {
+  width: 100%;
+}
+
+.ui-kit__form--type-01 .form .custom-input label input {
+  margin-left: 0;
+  padding: 12px 20px 13px 20px;
+  min-height: unset;
+  background: #ffffff;
+  border: 1px solid #D7D7D7;
+  color: #000000;
+}
+
+.ui-kit__form--type-01 .form .custom-input label input:hover,
+.ui-kit__form--type-01 .form .custom-input label input:focus-visible {
+  border-color: #525151;
+}
+
+.ui-kit__form--type-01 .form .custom-input__label {
+  color: #D7D7D7;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.ui-kit__form--type-01 .form .custom-input[data-slide-label] .custom-input__label {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 20px;
+}
+
+.ui-kit__form--type-01 .form .custom-input[data-slide-label] .custom-input__label.is-slided {
+  -webkit-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  transform: translateY(-50px);
+  font-size: 14px;
+  color: #6B6868;
+}
+
+.ui-kit__form--type-01 .form .custom-input.is-invalid input {
+  border: 1px solid #E53935;
+}
+
+.ui-kit__form--type-01 .form .custom-input__error {
+  left: 20px;
+  right: auto;
+  top: 5px;
+  bottom: auto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 .footer {

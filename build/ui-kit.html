@@ -480,6 +480,89 @@
                   </div>
                 </div>
               </div>
+              <div class="ui-kit__row form-row form-row--type-01">
+                <div class="ui-kit__col element"><span></span></div>
+                <div class="ui-kit__col state state--default">
+                  <div class="ui-kit__form ui-kit__form--type-01">
+                    <div class="form form--01" data-validate>
+                      <form class="ui-kit__form-form form__form" action="#" method="post">
+                        <div class="custom-input form__input" data-validate-type="phone" data-slide-label>
+                          <label>
+                            <input type="text"><span class="custom-input__label">Телефон</span>
+                          </label>
+                          <div class="custom-input__error">Поле обязательно для заполнения</div>
+                        </div>
+                        <div class="custom-input form__input" data-validate-type="text" data-slide-label>
+                          <label>
+                            <input type="text" minlength="2"><span class="custom-input__label">Имя</span>
+                          </label>
+                          <div class="custom-input__error">Поле обязательно для заполнения</div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui-kit__col state state--focus">
+                  <div class="ui-kit__form ui-kit__form--type-01">
+                    <div class="form form--01" data-validate>
+                      <form class="ui-kit__form-form form__form" action="#" method="post">
+                        <div class="custom-input form__input" data-validate-type="phone" data-slide-label>
+                          <label>
+                            <input type="text"><span class="custom-input__label">Телефон</span>
+                          </label>
+                          <div class="custom-input__error">Поле обязательно для заполнения</div>
+                        </div>
+                        <div class="custom-input form__input" data-validate-type="text" data-slide-label>
+                          <label>
+                            <input type="text" minlength="2"><span class="custom-input__label">Имя</span>
+                          </label>
+                          <div class="custom-input__error">Поле обязательно для заполнения</div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui-kit__col state state--text">
+                  <div class="ui-kit__form ui-kit__form--type-01">
+                    <div class="form form--01" data-validate>
+                      <form class="ui-kit__form-form form__form" action="#" method="post">
+                        <div class="custom-input form__input" data-validate-type="phone" data-slide-label>
+                          <label>
+                            <input type="text" value="+7(645) 651 61 32"><span class="custom-input__label">Телефон</span>
+                          </label>
+                          <div class="custom-input__error">Поле обязательно для заполнения</div>
+                        </div>
+                        <div class="custom-input form__input" data-validate-type="text" data-slide-label>
+                          <label>
+                            <input type="text" value="Имя" minlength="2"><span class="custom-input__label">Имя</span>
+                          </label>
+                          <div class="custom-input__error">Поле обязательно для заполнения</div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui-kit__col state state--error">
+                  <div class="ui-kit__form ui-kit__form--type-01">
+                    <div class="form form--01" data-validate>
+                      <form class="ui-kit__form-form form__form" action="#" method="post">
+                        <div class="custom-input form__input is-invalid" data-validate-type="phone" data-slide-label>
+                          <label>
+                            <input type="text"><span class="custom-input__label">Телефон</span>
+                          </label>
+                          <div class="custom-input__error">Поле обязательно для заполнения</div>
+                        </div>
+                        <div class="custom-input form__input is-invalid" data-validate-type="text" data-slide-label>
+                          <label>
+                            <input type="text" minlength="2"><span class="custom-input__label">Имя</span>
+                          </label>
+                          <div class="custom-input__error">Поле обязательно для заполнения</div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -537,8 +620,8 @@ const setSpaces = () => {
     console.log(numbers);
     numbers.forEach((number) => {
       const spaced = number.innerText.replace(
-          /(\d)(?=(\d\d\d)+([^\d]|$))/g,
-          '$1 '
+        /(\d)(?=(\d\d\d)+([^\d]|$))/g,
+        '$1 '
       );
       number.innerText = spaced;
     });
@@ -548,6 +631,34 @@ const setSpaces = () => {
 setSpaces();
 
 // Вставляем пробелы между разрядами цифр в ценах Конец
+
+// Скользящий лэйбл у инпута -- Начало --
+// Sliding label at input -- Start --
+
+function slideInputLabel() {
+  const inputs = document.querySelectorAll('[data-slide-label] input');
+  if (inputs.length) {
+    inputs.forEach((input) => {
+      const label = input.nextElementSibling;
+      input.addEventListener('focus', () => {
+        if (!label.classList.contains('is-slided')) {
+          label.classList.add('is-slided');
+        }
+      });
+      input.addEventListener('blur', () => {
+        if (input.value.length <= 2 || input.value.trim().length === 0) {
+          console.log(input.value.length);
+          label.classList.remove('is-slided');
+        }
+      });
+    });
+  }
+}
+
+slideInputLabel();
+
+// Скользящий лэйбл у инпута -- Конец --
+// Sliding label at input -- End --
 
       </script>
     </div>
