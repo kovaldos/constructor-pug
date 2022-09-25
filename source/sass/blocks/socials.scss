@@ -7,37 +7,71 @@
 	&__icon {
 		color: $color-night-rider;
 		transition: color $trans-default;
+		pointer-events: none;
 	}
 	&__link {
 		width: 30px;
 		height: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		flex: 0 0 30px;
 		border-radius: 10px;
 		padding: 0;
-		&:hover,
-		&:focus-visible {
-			.socials {
-				&__icon {
-					&--fb {
-						color: $color-mariner;
+		transition: background-color $trans-default;
+		@media (hover: hover), screen and (min-width: 0\0) {
+			&:hover {
+				.socials {
+					&__icon {
+						&--fb {
+							color: $color-mariner;
+						}
+						&--tg {
+							color: $color-pacific-blue;
+						}
+						&--tweet {
+							color: $color-malibu;
+						}
+						&--viber {
+							color: $color-vivid-violet;
+						}
+						&--vk {
+							color: $color-san-marino;
+						}
+						&--whatsapp {
+							color: $color-fruit-salad;
+						}
+						&--yt {
+							color: $color-cinnabar;
+						}
 					}
-					&--tg {
-						color: $color-pacific-blue;
-					}
-					&--tweet {
-						color: $color-malibu;
-					}
-					&--viber {
-						color: $color-vivid-violet;
-					}
-					&--vk {
-						color: $color-san-marino;
-					}
-					&--whatsapp {
-						color: $color-fruit-salad;
-					}
-					&--yt {
-						color: $color-cinnabar;
+				}
+			}
+			@include focus ($custom_default: false) {
+				@include custom_outline;
+				.socials {
+					&__icon {
+						&--fb {
+							color: $color-mariner;
+						}
+						&--tg {
+							color: $color-pacific-blue;
+						}
+						&--tweet {
+							color: $color-malibu;
+						}
+						&--viber {
+							color: $color-vivid-violet;
+						}
+						&--vk {
+							color: $color-san-marino;
+						}
+						&--whatsapp {
+							color: $color-fruit-salad;
+						}
+						&--yt {
+							color: $color-cinnabar;
+						}
 					}
 				}
 			}
@@ -48,9 +82,7 @@
 			flex: 0 0 30px;
 			border-radius: 10px;
 			padding: 0;
-			background: $color-night-rider;
-			background-repeat: no-repeat;
-			background-size: cover;
+			background-color: $color-night-rider;
 			position: relative;
 			overflow: hidden;
 			&::before {
@@ -65,9 +97,15 @@
 				transition: opacity $trans-default;
 				z-index: -1;
 			}
-			&:hover,
-			&:focus-visible {
-				background: $color-transparent;
+			&:hover {
+				background-color: $color-transparent;
+				&::before {
+					opacity: 1;
+				}
+			}
+			@include focus ($custom_default: false) {
+				@include custom_outline;
+				background-color: $color-transparent;
 				&::before {
 					opacity: 1;
 				}

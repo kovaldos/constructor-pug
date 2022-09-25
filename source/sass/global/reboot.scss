@@ -41,9 +41,6 @@ body {
 a {
   color: $color-default-black;
   text-decoration: none;
-  &:focus-visible {
-    outline: none;
-  }
 }
 
 img,
@@ -53,6 +50,12 @@ video {
   height: auto;
   object-fit: cover;
 }
+
+// img {
+//   width: 100%;
+//   height: auto;
+//   aspect-ratio: attr(width) / attr(height);
+// } 
 
 textarea {
   resize: none;

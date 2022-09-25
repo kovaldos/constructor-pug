@@ -1,26 +1,29 @@
 .btn {
-  width: 100%;
+  width: auto;
   max-width: fit-content;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 40px 11px;
+  padding: 1rem;
   background-color: $color-jade;
   border: none;
   cursor: pointer;
   border-radius: 40px;
-  transition: all $trans-default;
+  transition: color $trans-default, opacity $trans-default, background-color $trans-default, transform $trans-default, box-shadow $trans-default, border $trans-default;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
   color: $color-default-white;
-  &:focus {
-    outline: none;
+  transform: translateY(0);
+  &:active {
+    transform: translateY(2px);
   }
-
   &:disabled {
     opacity: 0.5;
     pointer-events: none;
+  }
+  svg {
+    transition: color $tf-default;
   }
   &--fill {
     background-color: $color-jade;
@@ -50,26 +53,27 @@
   }
   @media (hover: hover), screen and (min-width: 0\0) {
     &--fill {
-      &:hover,
-      &:focus-visible {
-        box-shadow: 0px 0px 16px rgba($color-default-black, 0.3);
+      &:hover {
+        box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.25);
       }
+      @include focus ($custom_default: false);
     }
     &--stroke {
-      &:hover,
-      &:focus-visible {
+      &:hover {
         color: $color-default-white;
         background-color: $color-jade;
       }
+      @include focus ($custom_default: false);
     }
     &--nav {
-      &:hover,
-      &:focus-visible {
+      &:hover {
+        color: $color-default-white;
         background-color: $color-jade;
         svg {
           color: $color-default-white;
         }
       }
+      @include focus ($custom_default: false);
     }
   }
 }

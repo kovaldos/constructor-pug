@@ -1,0 +1,14 @@
+.headers {
+  padding: 50px 0 150px;
+  &--version-01 {
+    .header {
+      &__container {
+        display: flex;
+        align-items: center;
+      }
+      &__logo {
+
+      }
+    }
+  }
+}

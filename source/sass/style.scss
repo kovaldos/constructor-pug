@@ -20,27 +20,28 @@
 // ---------------------------------
 
 @import "blocks/modal";
-@import "blocks/btn";
-@import "blocks/link";
-@import "blocks/title";
-@import "blocks/text";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
+@import "blocks/ui-components/btn";
+@import "blocks/ui-components/link";
+@import "blocks/ui-components/title";
+@import "blocks/ui-components/text";
+@import "blocks/ui-components/custom-input";
+@import "blocks/ui-components/custom-toggle";
+@import "blocks/ui-components/custom-select";
 @import "blocks/socials";
 @import "blocks/ui-kit";
-@import "blocks/header";
-@import "blocks/main-nav";
-@import "blocks/goods-card-type-01";
-@import "blocks/goods-card-type-02";
-@import "blocks/goods-card-type-03";
-@import "blocks/goods-card-type-04";
-@import "blocks/goods-card-type-05";
-@import "blocks/goods-card-type-06";
-@import "blocks/goods-card-type-07";
-@import "blocks/goods-card-type-08";
+@import "blocks/headers/headers";
+@import "blocks/menu/main-nav";
+@import "blocks/menu/main-nav-version01";
+@import "blocks/goods-cards/goods-card-type-01";
+@import "blocks/goods-cards/goods-card-type-02";
+@import "blocks/goods-cards/goods-card-type-03";
+@import "blocks/goods-cards/goods-card-type-04";
+@import "blocks/goods-cards/goods-card-type-05";
+@import "blocks/goods-cards/goods-card-type-06";
+@import "blocks/goods-cards/goods-card-type-07";
+@import "blocks/goods-cards/goods-card-type-08";
 @import "blocks/form";
-@import "blocks/footer";
+@import "blocks/footers/footer";
 
 
 // ---------------------------------
