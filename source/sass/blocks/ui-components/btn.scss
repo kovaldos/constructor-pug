@@ -22,8 +22,9 @@
     opacity: 0.5;
     pointer-events: none;
   }
-  svg {
-    transition: color $tf-default;
+  svg,
+  span {
+    transition: color $trans-default;
   }
   &--fill {
     background-color: $color-jade;

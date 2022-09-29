@@ -2,7 +2,6 @@ mixin headers(mods, currentUrl)
 	-
 		const data = {
 			ver1: {
-
 				links: [
 					{
 						href: "index.html",
@@ -24,26 +23,32 @@ mixin headers(mods, currentUrl)
 						href: "#",
 						text: "Контакты"
 					},
-				]
+				],
+				callBtn: "Заказать звонок",
 			}
 		}
 		
 	section.headers(class="headers--" + mods)
 		header.header
 			.container.header__container
+				button.btn.btn--reset.main-nav__toggle(type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger-btn)
+					svg(width='100' height='100' viewBox='0 0 100 100')
+						path.line.line1(d='M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058')
+						path.line.line2(d='M 20,50 H 80')
+						path.line.line3(d='M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942')
 				if(currentUrl === "index.html")
 					span.header__logo
 						+img("content", "logo", "png", 200, 40, "logo")
 				else
 					a.header__logo(href="index.html" aria-label="Переход на главную")
 						+img("content", "logo", "png", 200, 40, "logo")
-				button.main-nav__toggle.btn.btn--reset(type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger-btn)
-					svg(width='100' height='100' viewBox='0 0 100 100')
-						path.line.line1(d='M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058')
-						path.line.line2(d='M 20,50 H 80')
-						path.line.line3(d='M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942')
 				nav.main-nav
 					.main-nav__wrapper
+						button.btn.btn--reset.main-nav__sub-toggle(type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger-btn)
+							svg(width='100' height='100' viewBox='0 0 100 100')
+								path.line.line1(d='M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058')
+								path.line.line2(d='M 20,50 H 80')
+								path.line.line3(d='M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942')
 						ul.main-nav__list
 							each link in data.ver1.links
 								- const activeState = currentUrl === link.href
@@ -51,4 +56,17 @@ mixin headers(mods, currentUrl)
 									if(activeState)
 										span.main-nav__link.is-active=link.text
 									else
-										a.main-nav__link(href=link.href)=link.text
+										a.link.main-nav__link(href=link.href)=link.text
+				button.btn.btn--stroke.header__feedback-btn(type="button" data-open-modal="feedback-call")
+					+icon("phone-tube", 20, 20)
+					span=data.ver1.callBtn
+				ul.header__icons
+					li.header__icons-item
+						a.header__search(href="#")
+							+icon("icon-search", 20, 20).header__search-icon
+					li.header__icons-item
+						a.header__login(href="#")
+							+icon("icon-login", 20, 20).header__login-icon
+					li.header__icons-item
+						a.header__cart(href="#")
+							+icon("icon-cart", 20, 20).header__cart-icon
