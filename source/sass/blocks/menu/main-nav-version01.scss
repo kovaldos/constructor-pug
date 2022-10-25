@@ -4,21 +4,40 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
+    transition: visibility $trans-default, transform $trans-default;
     @include vp-1023 {
       visibility: hidden;
       position: fixed;
-      top: 50px;
+      top: 130px;
+      left: -100%;
+      background-color: $color-default-white;
+      width: 50vw;
+      height: calc(100vh - 80px);
+      transform: translateX(0);
+      &.is-active {
+        visibility: visible;
+        transform: translateX(200%);
+      }
     }
     &__wrapper {
       flex-grow: 1;
       display: flex;
       align-items: center;
+      @include vp-1023 {
+        align-items: flex-start;
+        height: 100%;
+      }
     }
     &__list {
       display: flex;
       margin: 0;
       padding: 0;
       list-style: none;
+      @include vp-1023 {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
     &__item {
       &:not(:last-of-type) {
@@ -26,12 +45,25 @@
         @include vp-1279 {
           margin-right: 20px;
         }
+        @include vp-1023 {
+          margin-right: 0;
+        }
+      }
+      @include vp-1023 {
+        width: 100%;
+        border-bottom: 1px solid $color-whisper;
+        padding: 19px 40px;
       }
     }
     &__link {
       color: $color-default-black;
+      font-size: 1.125rem;
+      line-height: 1.22rem;
       &.is-active {
         opacity: 0.6;
+      }
+      &:hover {
+        color: $color-ocean-green;
       }
     }
     &__toggle {
@@ -50,53 +82,40 @@
         pointer-events: none;
       }
     }
-    &__sub-toggle {
-      flex-shrink: 0;
-      width: 30px;
-      height: 30px;
-      padding: 0;
-      margin: 0 20px 0 0;
-      @include vp-1023 {
-        display: none;
-      }
-      svg {
-        width: 100%;
-        height: auto;
-        pointer-events: none;
-      }
-    }
   }
-}
-.line {
-  fill: none;
-  stroke: $color-ocean-green;
-  stroke-width: 6;
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.line1 {
-  stroke-dasharray: 60 207;
-  stroke-width: 6;
-}
-.line2 {
-  stroke-dasharray: 60 207;
-  stroke-width: 6;
-}
-.line3 {
-  stroke-dasharray: 60 207;
-  stroke-width: 6;
-}
-.is-active .line1 {
-  stroke-dasharray: 90 207;
-  stroke-dashoffset: -134;
-  stroke-width: 6;
-}
-.is-active .line2 {
-  stroke-dasharray: 1 60;
-  stroke-dashoffset: -30;
-  stroke-width: 6;
-}
-.is-active .line3 {
-  stroke-dasharray: 90 207;
-  stroke-dashoffset: -134;
-  stroke-width: 6;
+  .line {
+    fill: none;
+    stroke: $color-ocean-green;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .is-active .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .is-active .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .is-active .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+
 }

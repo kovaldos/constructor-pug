@@ -1,0 +1,161 @@
+mixin header-ver1() 
+	-
+		const data = {
+			links: [
+				{
+					href: "#",
+					text: "Каталог"
+				},
+				{
+					href: "#",
+					text: "Услуги"
+				},
+				{
+					href: "#",
+					text: "Проекты"
+				},
+				{
+					href: "#",
+					text: "Контакты"
+				},
+			],
+			menu: [
+				{
+					href: "#",
+					text: "Компания"
+				},
+				{
+					href: "#",
+					text: "Информация"
+				},
+				{
+					href: "#",
+					text: "Каталог"
+				},
+				{
+					href: "#",
+					text: "Услуги"
+				},
+				{
+					href: "#",
+					text: "Проекты"
+				},
+				{
+					href: "#",
+					text: "Курсы"
+				},
+				{
+					href: "#",
+					text: "Контакты"
+				},
+			],
+			menuLinks1: [
+				{
+					href: "#",
+					text: "О компании",
+				},
+				{
+					href: "#",
+					text: "История",
+				},
+				{
+					href: "#",
+					text: "Партнеры",
+				},
+				{
+					href: "#",
+					text: "Лицензии",
+				},
+				{
+					href: "#",
+					text: "Сотрудники",
+				},
+				{
+					href: "#",
+					text: "Отзывы",
+				},
+				{
+					href: "#",
+					text: "Вакансии",
+				},
+				{
+					href: "#",
+					text: "Реквизиты",
+				},
+			],
+			menuLinks2: [
+				{
+					href: "#",
+					text: "Акции",
+				},
+				{
+					href: "#",
+					text: "Новости",
+				},
+				{
+					href: "#",
+					text: "Статьи",
+				},
+				{
+					href: "#",
+					text: "Вопрос-ответ",
+				},
+			],
+			callBtn: "Заказать звонок",
+			counter: 5
+		}
+	header.header
+		.container.header__container
+			button.btn.btn--reset.main-nav__toggle(type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger-btn)
+				svg(width='100' height='100' viewBox='0 0 100 100')
+					path.line.line1(d='M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058')
+					path.line.line2(d='M 20,50 H 80')
+					path.line.line3(d='M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942')
+			if(currentUrl === "index.html")
+				span.header__logo
+					+img("content", "logo", "png", 200, 40, "logo")
+			else
+				a.header__logo(href="index.html" aria-label="Переход на главную")
+					+img("content", "logo", "png", 200, 40, "logo")
+			nav.main-nav(data-burger-body)
+				.main-nav__wrapper
+					.dropdown-menu__wrapper(tabindex="0")
+						+dropdown-menu-btn()
+						.dropdown-menu__block
+							ul.dropdown-menu__list
+								each item, index in data.menu
+									li.dropdown-menu__list-item(class="dropdown-menu__list-item--" + (index + 1))
+										a.link.dropdown-menu__link(href=item.href)=item.text
+										if index === 0
+											ul.dropdown-menu__sublist
+												each item in data.menuLinks1
+													li.dropdown-menu__sublist-item
+														a.link.dropdown-menu__sublink(href!=item.href)!=item.text
+										if index === 1
+											ul.dropdown-menu__sublist
+												each item in data.menuLinks2
+													li.dropdown-menu__sublist-item 
+														a.link.dropdown-menu__sublink(href!=item.href)!=item.text
+
+					ul.main-nav__list
+						each link in data.links
+							- const activeState = currentUrl === link.href
+							li.main-nav__item
+								if(activeState)
+									span.main-nav__link.is-active=link.text
+								else
+									a.link.main-nav__link(href=link.href)=link.text
+			button.btn.btn--stroke.header__feedback-btn(type="button" data-open-modal="feedback-call")
+				+icon("phone-tube", 20, 20)
+				span=data.callBtn
+			ul.header__icons
+				li.header__icons-item
+					a.header__search(href="#")
+						+icon("icon-search", 20, 20).header__search-icon
+				li.header__icons-item
+					a.header__login(href="#")
+						+icon("icon-login", 20, 20).header__login-icon
+				li.header__icons-item
+					a.header__cart(href="#")
+						+icon("icon-cart", 20, 20).header__cart-icon
+						span.header__cart-counter=data.counter

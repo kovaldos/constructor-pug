@@ -1,0 +1,19 @@
+mixin dropdown-menu-btn(mods)
+	-
+		const data = {
+			text: "Меню",
+		}
+	if mods
+		button.btn.btn--reset.dropdown-menu__btn(class="menu__btn--" + mods type="button" aria-label="Кнопка показа выпадающего меню" aria-pressed="false" tabindex="-1")
+			strong.dropdown-menu__btn-stripes
+				span.dropdown-menu__btn-stripe.dropdown-menu__btn-stripe--top
+				span.dropdown-menu__btn-stripe.dropdown-menu__btn-stripe--middle
+				span.dropdown-menu__btn-stripe.dropdown-menu__btn-stripe--bottom
+			span.dropdown-menu__btn-text=data.text
+	else
+		button.btn.btn--reset.dropdown-menu__btn(type="button" aria-label="Кнопка показа выпадающего меню" aria-pressed="false" tabindex="-1")
+			strong.dropdown-menu__btn-stripes
+				span.dropdown-menu__btn-stripe.dropdown-menu__btn-stripe--top
+				span.dropdown-menu__btn-stripe.dropdown-menu__btn-stripe--middle
+				span.dropdown-menu__btn-stripe.dropdown-menu__btn-stripe--bottom
+			span.dropdown-menu__btn-text=data.text

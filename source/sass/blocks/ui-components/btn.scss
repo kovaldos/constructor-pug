@@ -24,7 +24,7 @@
   }
   svg,
   span {
-    transition: color $trans-default;
+    transition: color $trans-default, transform $trans-default;
   }
   &--fill {
     background-color: $color-jade;

@@ -87,7 +87,11 @@
 
 @mixin custom_outline {
   outline: 2px solid $color-outline-custom;
+  outline-color: $color-outline-custom;
   outline-offset: 2px;
+  outline-style: auto;
+  // outline: none;
+  // box-shadow: 0 0 0 2px $color-malibu;
 }
 
 @mixin focus($custom_default: false) {

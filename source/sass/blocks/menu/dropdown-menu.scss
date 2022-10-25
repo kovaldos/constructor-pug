@@ -1,0 +1,101 @@
+.dropdown-menu {
+	&__wrapper {
+		position: relative;
+		margin: 0 40px 0 0;
+		padding: 10px 0;
+		@include vp-1023 {
+			margin: 0;
+		}
+		@media (hover: hover), screen and (min-width: 0\0) {
+			&:hover {
+				.dropdown-menu__block {
+					opacity: 1;
+					visibility: visible;
+				}
+				.dropdown-menu__btn-text {
+					color: $color-ocean-green;
+				}
+				.dropdown-menu__btn-stripe--top {
+					transform: rotate(45deg) translateY(-2.5px);
+					transform-origin: left;
+				}
+				.dropdown-menu__btn-stripe--middle {
+					transform: scale(0);
+				}
+				.dropdown-menu__btn-stripe--bottom {
+					transform: rotate(-45deg) translateY(2.5px);
+					transform-origin: left;
+				}
+			}
+		}
+		&:focus {
+			outline: none;
+			.dropdown-menu__block {
+				opacity: 1;
+				visibility: visible;
+			}
+			.dropdown-menu__btn {
+				color: $color-ocean-green;
+				@include custom_outline;
+			}
+			.dropdown-menu__btn-text {
+				color: $color-ocean-green;
+			}
+			.dropdown-menu__btn-stripe--top {
+				transform: rotate(45deg) translateY(-2.5px);
+				transform-origin: left;
+			}
+			.dropdown-menu__btn-stripe--middle {
+				transform: scale(0);
+			}
+			.dropdown-menu__btn-stripe--bottom {
+				transform: rotate(-45deg) translateY(2.5px);
+				transform-origin: left;
+			}
+		}
+	}
+	&__block {
+		position: absolute;
+		top: 99%;
+		left: -60px;
+		padding: 30px;
+		background-color: $color-default-white;
+		z-index: 5;
+		box-shadow: 2px 5px 5px 0px rgba($color-default-black, 0.5);
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity $trans-default, visibility $trans-default;
+	}
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(5, 1fr);
+		grid-column-gap: 50px;
+		&-item {
+			&--1,
+			&--2 {
+				grid-row: 1/6;
+				margin: 0;
+			}
+		}
+	}
+	&__link {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 22px;
+	}
+	&__sublist {
+		margin: 5px 0 0;
+		padding: 0;
+		list-style: none;
+	}
+	&__sublink {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+		color: $color-dim-gray;
+	}
+}
